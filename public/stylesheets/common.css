@@ -276,7 +276,6 @@ ul {
 }
 .nav-top .navbar-nav>li {
     position: relative;    
-    margin: 0 8px;
 }
 .nav-top .navbar-nav>li>a {
     color: #8c8c8c;
@@ -305,16 +304,16 @@ ul {
 .nav-top .selected::before, .nav-top .selected::after {
     content: '';
     position: absolute;
-    width: 38px;
+    width: 30px;
     height: 2px;
     top: 5px;
     background: #404040;
 }
 .nav-top .selected::before {
-    left: -44px;
+    left: -35px;
 }
 .nav-top .selected::after {
-    right: -44px;
+    right: -35px;
 }
 /* 底部 */
 footer.footer {
