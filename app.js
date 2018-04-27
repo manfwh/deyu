@@ -7,10 +7,17 @@ const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const multer = require('koa-multer');
 const upload = multer({ dest: 'uploads/' });
+const session = require('koa-session')
 
 const index = require('./routes/index')
 const form = require('./routes/form')
 
+app.keys = ['deyu', 'yidou', 'pc'];
+const seccionConfig = {
+  key: 'deyu',
+  maxAge: 86400000,
+}
+app.use(session(seccionConfig, app))
 // error handler
 onerror(app)
 

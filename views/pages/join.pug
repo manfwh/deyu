@@ -32,7 +32,11 @@ block content
           a(href="/") 首页 
        
         li.active  合作招募
-    .block
+    .jumbotron(style="display:none")
+      h1 提交成功
+      p 
+        a.btn.btn-primary.btn-lg(href="/") 回到首页
+    .block.mt-50
       .header
         .title 
           | HEZUOZHAOMU
@@ -41,7 +45,7 @@ block content
         .col-lg-10.col-lg-offset-1.form-wrap    
           img.img-responsive.topLeftPic(src="/images/joinPic2.png", alt="")
           img.img-responsive.bottomRightPic(src="/images/joinPic3.jpg", alt="")
-          form(action="/join", method="post")
+          form#joinForm
             .col-sm-6
                .form-group
                  label(for="name") 姓名
@@ -62,12 +66,29 @@ block content
             .col-sm-12
               .form-group
                 label(for="remarks") 备注
-                textarea.form-control(rows="6")
+                textarea.form-control(rows="6", name="remarks")
             .col-sm-4.col-sm-offset-4
               .btn-wrap.mt-50
                 button.btn.btn-default.btn-lg.btn-block(type='submit') 提交
   script.
-    new WOW().init();
+    
+    $(function() {
+      new WOW().init();
+      $('#joinForm').submit(function(event) {
+            event.preventDefault();
+            var form = $(this);
+            $.ajax({
+                type: 'POST',
+                url: '/join',
+                data: form.serialize()
+            }).done(function(data, status) {
+                $('.block').hide();
+                $('.jumbotron').show()
+            }).fail(function() {
+                alert('提交失败，请联系管理员！')
+            })
+        })
+    })
   
     
 

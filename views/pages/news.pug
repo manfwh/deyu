@@ -1,0 +1,78 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/entityShop.css")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+                
+            li
+                a(href="/entityShop") DIV生活馆
+            li.active
+                a(href="/about")  关于我们
+                 .selected
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  .container
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+          a(href="/") 首页 
+        li
+          a(href="/entityShop")  关于我们
+        li.active  动态详情
+    section
+      article.mt-50 
+        h1  #{article.title}
+        .line
+        p.text-muted 中弘大厦是一座标志性地标建筑坐落于
+        p.text-muted 北京海淀区，项目与CCTV大楼、华贸等地标建筑遥相呼应，构成吸金纳财的财富金三角，丰富了CBD天际线
+        p.text-muted  ·······························································
+        p.text-muted
+            span.glyphicon.glyphicon-time(aria-hidden='true')
+            |  2017-07-15
+            span(style="margin: 0 20px")
+            span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+            |  245446
+        .main.mt-50 
+          img.img-responsive(src="/images/360.jpg", alt="")
+          .row.mt-50
+            .col-xs-4
+              img.img-responsive(src="/images/article.jpg", alt="")
+            .col-xs-4
+              img.img-responsive(src="/images/article.jpg", alt="")
+            .col-xs-4
+              img.img-responsive(src="/images/article.jpg", alt="")
+          h2 
+            | 财富金三角 /
+            |
+            <small>Fortune Golden Triangle</small>
+          p.text-muted 中弘大厦是一座标志性地标建筑坐落于
+          p.text-muted 北京海淀区，项目与CCTV大楼、华贸等地标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富金三角，丰富了CBD天际线
+          p.text-muted 中弘大厦是一座标志性地标建筑坐落于
+          p.text-muted 北京海淀区，项目与CCTV大楼、华贸等地标建筑遥相呼应，构成吸金纳财的财富金三角，丰富了CBD天际线
+          p.text-muted 北京海淀区，项目与CCTV大楼、华贸等地标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富标建筑遥相呼应，构成吸金纳财的财富金三角，丰富了CBD天际线
+          p.text-muted 中弘大厦是一座标志性地标建筑坐落于
+          p.text-muted 北京海淀区，项目与CCTV大楼、华贸等地标建筑遥相呼应，构成吸金纳财的财富金三角，丰富了CBD天际线
+  img.img-responsive.mtb-50(src="/images/videoPic.jpg", alt="")
+  .container 
+    p.text-muted.
+        he building on the North East East Fourth Ring Road, Chaoyang Road, a high-end CBD in the area of office building.
+        Th brand high speed elevator, intelligent broadband, advanced commercial office space configuration and multi-functional intelligent office system to fully meet the business convenience and create a modern, high-quality and efficient comfortable office environment.
+    p.text-muted.
+        The project is located in the core area of CBD. With the end of regional construction, a large number of super 5A office buildings high-end hotels and shopping malls have been built within a few kilometers of the area.
+        Project with CCTV building, CTS landmark building echoes, a wealth of Golden Triangle gold Nacai, enriched the CBD skyline while enjoying more powerful advantage in this area.
+    p.text-muted.
+        Philip tower is a landmark building located in the
+        Beijing Haidian District project and CCTV building, CTS landmark building echoes, a wealth of suction gold Nacai Golden Triangle, rich CBD skyline.The hardware facilities, property management, and customer grade are the world's first water Commodore to be the future landmark office project. Philip building is one of the main products in Hong shares, by one of the world's top design firms in the United States SOM architectural design firm design. The project adopts international brand high speed elevator, intelligent broadband, advanced commercial office space configuration and multi-functional intelligent office system to fully meet the business convenience and create a modern, high-quality and efficient comfortable office environment.

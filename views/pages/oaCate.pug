@@ -1,0 +1,73 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/hr.css")
+  include ../includes/swiper.pug
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+            li
+                a(href="/entityShop") DIV生活馆
+            li
+                a(href="/about")  关于我们
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li.active
+                a(href="/oa")  OA办公
+                .selected
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  .container.shadow
+    .top-bar.hidden-xs
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+          a(href="/") 首页 
+        li
+          a(href="/oa") OA办公 
+        li.active  #{cateName}
+    .block.mt-50
+      .header
+        .title 
+          | OAB OFFICE
+          .title-text #{cateName}
+      .block-content
+        table.table.table-striped.table-bordered
+          thead
+            tr
+              th 序号
+              th 标题
+              th 文件类型
+              th 文件大小
+              th 上传时间
+              th 下载
+          tbody
+            tr
+              td 1
+              td #{cateName}#{cateName}
+              td doc
+              td 755KB
+              td 2018/04/20
+              td 
+                a(href="#" download) 点击下载
+            tr
+              td 2
+              td #{cateName}#{cateName}
+              td doc
+              td 755KB
+              td 2018/04/20
+              td 
+                a(href="#" download) 点击下载
+         
+        
+    
+
+      
+    

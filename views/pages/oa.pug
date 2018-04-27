@@ -32,34 +32,37 @@ block content
           a(href="/") 首页 
        
         li.active  OA办公
-      .searchWrap.pull-right
-        .pull-left
-          .btn-group
-            .btn.btn-default.dropdown-toggle.cate-btn(data-toggle="dropdown")
-              | 全部 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href="#") 行政文件
-              li
-                a(href="#") VIS资料
-              li
-                a(href="#") 培训资料
-              li
-                a(href="#") 策划方案
-              li
-                a(href="#") 产品资料
+      //- .searchWrap.pull-right
+      //-   .pull-left
+      //-     .btn-group
+      //-       .btn.btn-default.dropdown-toggle.cate-btn(data-toggle="dropdown")
+      //-         | 全部 
+      //-         span.caret
+      //-       ul.dropdown-menu
+      //-         li
+      //-           a(href="#") 行政文件
+      //-         li
+      //-           a(href="#") VIS资料
+      //-         li
+      //-           a(href="#") 培训资料
+      //-         li
+      //-           a(href="#") 策划方案
+      //-         li
+      //-           a(href="#") 产品资料
         
-        .input-wrap.pull-left
-          input(type="text", placeholder="搜索今日新品吧...")
-        .search-wrap
-          button.btn.btn-default
-            span.glyphicon.glyphicon-search
+      //-   .input-wrap.pull-left
+      //-     input(type="text", placeholder="搜索今日新品吧...")
+      //-   .search-wrap
+      //-     button.btn.btn-default
+      //-       span.glyphicon.glyphicon-search
     //- 资料提取
-    h2.text-center.mt-50 资料提取
+    .block.mt-50
+      .header
+        .title 
+          | OAB OFFICE
+          .title-text OA办公
     .news.mt-50
-     
-      ol.wow
+      //- ol.wow
         li.news.mt-50.clearfix
           img(src="/images/newsTop1.jpg", alt="").pull-left.mt-31
           img(src="/images/newsPic.jpg", alt="").pull-left
@@ -91,27 +94,61 @@ block content
             p.hot.clearfix
                 span.pull-left.mr-40 256人浏览
                 span.pull-left 2017-6-23
-      nav.pages.text-center(aria-label='Page navigation')
+      .row(style="margin-top:26px")
+          .col-md-4
+            .maskPic
+              img.img-responsive(src="/images/newProduct/2.jpg", alt="")
+              a(href="/oa/all").des 
+                h2 全部
+                h2 全部
+          .col-md-4
+            .maskPic
+              img.img-responsive(src="/images/newProduct/2.jpg", alt="")
+              a(href="/oa/xz").des 
+                h2 行政文件
+                h2 行政文件
+          .col-md-4
+            .maskPic
+              img.img-responsive(src="/images/newProduct/2.jpg", alt="")
+              a(href="/oa/vis").des
+                h2 VIS资料
+                h2 VIS资料
+      .row(style="margin-top:50px")       
+          .col-md-4
+            .maskPic
+              img.img-responsive(src="/images/newProduct/2.jpg", alt="")
+              a(href="/oa/ch").des 
+                h2 策划方案
+                h2 策划方案
+          .col-md-4
+            .maskPic
+              img.img-responsive(src="/images/newProduct/2.jpg", alt="")
+              a(href="/oa/cp").des 
+                h2 产品资料
+                h2 产品资料
+          .col-md-4
+            .maskPic
+              img.img-responsive(src="/images/newProduct/2.jpg", alt="")
+              a(href="oa/train").des
+                h2 培训资料
+                h2 培训资料
+      nav.hide.pages.text-center(aria-label='Page navigation')
         ul.pagination
-            li
+            li.disabled
                 a(href='#', aria-label='Previous')
                     span(aria-hidden='true') &laquo;
             li.active
                 a(href='#') 1
-            li
-                a(href='#') 2
-            li
-                a(href='#') 3
-            li
-                a(href='#') 4
-            li
-                a(href='#') 5
-            li
+            li.disabled
                 a(href='#', aria-label='Next')
                     span(aria-hidden='true') &raquo;   
     .oaBarWrap
       img.img-responsive(src="/images/oaBarPic.jpg", alt="")
-    h2.text-center 最新展览
+    .block.mt-50
+      .header
+        .title 
+          | ZUIXINZHANLAN
+          .title-text 最新展览
     .row.mt-50.items
       .col-lg-6
         img(src="/images/zhanlan.jpg", alt="").pull-left
@@ -148,20 +185,12 @@ block content
                 span.pull-left 2017-6-23 
     nav.pages.text-center(aria-label='Page navigation')
         ul.pagination
-            li
+            li.disabled
                 a(href='#', aria-label='Previous')
                     span(aria-hidden='true') &laquo;
             li.active
                 a(href='#') 1
-            li
-                a(href='#') 2
-            li
-                a(href='#') 3
-            li
-                a(href='#') 4
-            li
-                a(href='#') 5
-            li
+            li.disabled
                 a(href='#', aria-label='Next')
                     span(aria-hidden='true') &raquo;   
   script.

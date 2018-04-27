@@ -15,7 +15,7 @@
     margin-right: 20px;
 }
 .mt-50 {
-    margin-top: 50px;
+    margin-top: 50px !important;
 }
 .mtb-50 {
     margin: 50px 0;
@@ -108,6 +108,71 @@ p.hot span::before {
     background: #b8b8b8;
     margin-right: 10px;
 }
+/* 新品推荐 */
+.img-box-lg, .img-box-lg img{
+    width: 100%;
+    height: 506px;
+}
+.img-box-md, .img-box-md img{
+    width: 100%;
+    height: 240px;
+}
+.img-box-lg, .img-box-md {
+    position: relative;
+    overflow: hidden;
+}
+.img-box-lg:hover .des, .img-box-md:hover .des {
+    bottom: 0;
+}
+.img-box-lg .des {
+    height: 75px;    
+    bottom: -75px;
+    padding: 20px;    
+}
+.img-box-md .des {
+    height: 45px;    
+    bottom: -45px;
+    padding: 5px;
+}
+.img-box-lg .des, .img-box-md .des {
+    width: 100%;
+    position: absolute;
+    background: #50985f;
+    left: 0;
+    transition: bottom .2s;
+}
+.des .product-name {
+    color: #fff;
+    font-size: 18px;
+}
+.col-md-6 .des .product-name {
+    font-size: 14px;
+}
+.col-md-6 .des .product-des {
+    font-size: 12px;
+}
+.des .product-des {
+    color: #b5cfba;
+    font-size: 14px;
+}
+.des .old-price {
+    color: #87bd93;
+    font-size: 14px;
+}
+.des .new-price {
+    font-size: 24px;
+    color: #fff;
+}
+.col-md-6 .old-price {
+    font-size: 12px;
+}
+.col-md-6 .new-price {
+    font-size: 14px;
+}
+.img-box-md img {
+    width: 100%;
+}
+
 /* 关于我们--->最新动态       OA办公-----> 资料*/
 .news {
     padding: 0 50px;
