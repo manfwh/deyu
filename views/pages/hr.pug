@@ -1,9 +1,7 @@
 extends ../layout
 block css
   link(rel="stylesheet", href="/stylesheets/hr.css")
-  link(rel="stylesheet", href="/bower_components/swiper/dist/css/swiper.min.css")
-block append scripts
-  script(src="/bower_components/swiper/dist/js/swiper.min.js")
+  include ../includes/swiper.pug
 block nav
   include ../includes/nav.pug
     block navbar
