@@ -1,0 +1,24 @@
+{
+  "name": "pc",
+  "description": "",
+  "main": "",
+  "authors": [
+    "manfwh <841533182@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/manfwh/deyu",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "swiper": "^4.2.2",
+    "bootstrap": "3.3.7",
+    "wow": "wowjs#^1.1.2"
+  }
+}
