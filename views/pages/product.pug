@@ -12,7 +12,7 @@ block nav
                 a(href="/product") 产品介绍
                 .selected
             li
-                a(href="/entityShop") 实体店铺
+                a(href="/entityShop") DIV生活馆
             li
                 a(href="/about")  关于我们
             li
@@ -31,23 +31,23 @@ block content
             a(href="#") Home  
             |  
         li.active 新品推荐
-      .searchWrap.pull-right
-        .pull-left
-          .btn-group
-            .btn.btn-default.dropdown-toggle.cate-btn(data-toggle="dropdown")
-              | 分类 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href="#") 分类一
-              li
-                a(href="#") 分类二
+    //-   .searchWrap.pull-right
+    //-     .pull-left
+    //-       .btn-group
+    //-         .btn.btn-default.dropdown-toggle.cate-btn(data-toggle="dropdown")
+    //-           | 分类 
+    //-           span.caret
+    //-         ul.dropdown-menu
+    //-           li
+    //-             a(href="#") 分类一
+    //-           li
+    //-             a(href="#") 分类二
         
-        .input-wrap.pull-left
-          input(type="text", placeholder="搜索今日新品吧...")
-        .search-wrap
-          button.btn.btn-default
-            span.glyphicon.glyphicon-search
+    //-     .input-wrap.pull-left
+    //-       input(type="text", placeholder="搜索今日新品吧...")
+    //-     .search-wrap
+    //-       button.btn.btn-default
+    //-         span.glyphicon.glyphicon-search
           
     //- 新品推荐
     .block
@@ -166,55 +166,86 @@ block content
                         .new-price ￥1999.00 
         nav.pages(aria-label='Page navigation')
             ul.pagination
-                li
+                li.disabled
                     a(href='#', aria-label='Previous')
                         span(aria-hidden='true') &laquo;
                 li.active
                     a(href='#') 1
-                li
-                    a(href='#') 2
-                li
-                    a(href='#') 3
-                li
-                    a(href='#') 4
-                li
-                    a(href='#') 5
-                li
+                li.disabled
                     a(href='#', aria-label='Next')
                         span(aria-hidden='true') &raquo;
             
   img.barPic(src="/images/productAd.jpg", alt="")         
   .container   
-    .block
+    .block.mt-150 
       .header
         .title 
           | MEIYANKEJI
           .title-text 美颜科技 
       .block-content.row.pad100
-        each val in [1,1,1,1,1,1,1,1]
-          .col-md-3
-            a(href="#").product-item
-                img(src="/images/shebeiPic/1.jpg", alt="")
-                p.product-name 鱼籽油精华小黄瓶
-                p.product-des 万人都说好的日本尖货
-                p.product-price ￥1999.00
-    nav.pages(aria-label='Page navigation')
-            ul.pagination
-                li
-                    a(href='#', aria-label='Previous')
-                        span(aria-hidden='true') &laquo;
-                li.active
-                    a(href='#') 1
-                li
-                    a(href='#') 2
-                li
-                    a(href='#') 3
-                li
-                    a(href='#') 4
-                li
-                    a(href='#') 5
-                li
-                    a(href='#', aria-label='Next')
-                        span(aria-hidden='true') &raquo;
+        .row(style="margin-top:26px")
+          .col-lg-8
+            .row
+              .col-md-6
+                .img-box-md
+                    img(src="/images/newProduct/2.jpg", alt="")
+                    .des
+                        .pull-left
+                            .product-name 深层滋养新技术
+                            .product-des 来自美国最新萃取技术
+                        .pull-right
+                            .old-price.text-right 原价 ￥2999.00
+                            .new-price ￥1999.00 
+              .col-md-6
+                .img-box-md
+                    img(src="/images/newProduct/2.jpg", alt="")
+                    .des
+                        .pull-left
+                            .product-name 深层滋养新技术
+                            .product-des 来自美国最新萃取技术
+                        .pull-right
+                            .old-price.text-right 原价 ￥2999.00
+                            .new-price ￥1999.00 
+            .row(style="margin-top: 26px")
+              .col-md-6
+                .img-box-md
+                    img(src="/images/newProduct/2.jpg", alt="")
+                    .des
+                        .pull-left
+                            .product-name 深层滋养新技术
+                            .product-des 来自美国最新萃取技术
+                        .pull-right
+                            .old-price.text-right 原价 ￥2999.00
+                            .new-price ￥1999.00 
+              .col-md-6
+                .img-box-md
+                    img(src="/images/newProduct/2.jpg", alt="")
+                    .des
+                        .pull-left
+                            .product-name 深层滋养新技术
+                            .product-des 来自美国最新萃取技术
+                        .pull-right
+                            .old-price.text-right 原价 ￥2999.00
+                            .new-price ￥1999.00 
+          .col-lg-4
+            .img-box-lg
+                img(src="/images/newProduct/1.jpg", alt="") 
+                .des
+                    .pull-left
+                        .product-name 深层滋养新技术
+                        .product-des 来自美国最新萃取技术
+                    .pull-right
+                        .old-price.text-right 原价 ￥2999.00
+                        .new-price ￥1999.00 
+
+            //-     each val in [1,1,1,1,1,1,1,1]
+            //-       .col-md-3
+            //-         a(href="#").product-item
+            //-             img(src="/images/shebeiPic/1.jpg", alt="")
+            //-             p.product-name 鱼籽油精华小黄瓶
+            //-             p.product-des 万人都说好的日本尖货
+            //-             p.product-price ￥1999.00
+            //- nav.pages(aria-label='Page navigation')
+            
         
             

@@ -268,9 +268,12 @@
 .cooperation {
     margin-top: 600px;
 }
+.cooperation .row .col-lg-4 {
+    margin-top: 50px;
+}
 .cooperation .row img {
     width: 317px;
-    height: 249px;
+    height: 90px;
     border: 8px solid #63a371;
 }
 .cooperation .row p {
