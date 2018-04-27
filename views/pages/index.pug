@@ -1,0 +1,224 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/style.css")
+
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li.active
+                a(href='/') 首页
+                .selected    
+            li
+                a(href="/product") 产品介绍   
+            li
+                a(href="/entityShop") 实体店铺
+            li
+                a(href="/about")  关于我们
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  #banner.carousel.slide(data-ride='carousel')
+    // Indicators
+    ol.carousel-indicators
+      li.active(data-target='#banner', data-slide-to='0')
+      li(data-target='#banner', data-slide-to='1')
+    // Wrapper for slides
+    .carousel-inner(role='listbox')
+      .item.active
+        img(src='/images/banner1.jpg', alt='...')
+        .carousel-caption
+      .item
+        img(src='/images/banner2.jpg', alt='...')
+        .carousel-caption
+    // Controls
+    a.left.carousel-control(href='#banner', role='button', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+      span.sr-only Previous
+    a.right.carousel-control(href='#banner', role='button', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+      span.sr-only Next
+  .container
+    // 产品
+    .block
+      .header
+        .title 
+          | CHANPINZHANSHI
+          .title-text 产品展示    
+        ul.row.prod-tabs
+          li.col-md-2(role='presentation')
+          li.col-md-2.active.cate(role='presentation',)
+            a(href="#tab1",  data-toggle="tab").cate-name
+              | 护肤
+              br
+              span Skin care
+            img(src="/images/cateBg.png", alt="")
+            
+          li.col-md-2.cate(role='presentation')
+            a(href="#tab2",  data-toggle="tab").cate-name 
+                | 彩妆
+                br
+                span Skin care
+            img(src="/images/cateBg.png", alt="")
+          li.col-md-2.cate(role='presentation', data-toggle="tab")
+            a(href="#tab3").cate-name 
+                | 日化
+                br
+                span Skin care
+            img(src="/images/cateBg.png", alt="")
+          li.col-md-2.cate(role='presentation', data-toggle="tab")
+            a(href="#tab4").cate-name 
+                | 美颜科技
+                br
+                span Skin care
+            img(src="/images/cateBg.png", alt="")
+          li.col-md-2.active(role='presentation')
+        .tab-content
+          #tab1.tab-pane.fade.in.active.row
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/1/1.png", alt="")
+              .product-title  护肤
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/1/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/1/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/1/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/1/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/1/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+          #tab2.tab-pane.fade.in.row
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/2/1.png", alt="")
+              .product-title  护肤
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/2/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/2/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/2/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/2/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+            a.col-md-2.product(href="/product/2")
+              img(src="/images/cate/2/1.png", alt="")
+              .product-title  精华系列
+              .line
+              .product-title  ESSENC
+    // 公司动态
+    .block
+      .header
+        .title 
+          | GONGSIDONGTAI
+          .title-text 公司动态      
+      .block-content
+        .news-box.clearfix
+          .sec2
+          .pic-wrap          
+          .left
+            .mask
+            .inner-box.wow.bounceInUp
+              | 纳米无硅油产品发布会
+              br
+              | Chamomile series
+          .right
+            .tit 无硅油滋养新技术
+            .des 
+              | 来自美国最新萃取技术
+              br
+              | 100层深度萃取
+            .discount.clearfix
+              .discount-text 新品折扣
+              .discount-num.wow.bounceInLeft(data-wow-delay="0.2s") -20%
+            .more MORE
+       
+        .more-btn
+          | 更多动态
+          br
+          | GENGDUODONGTAI
+    #rank
+      .store-wrap.top1    
+        img.rank-num.wow.bounceInLeft(src="/images/top1.png", alt="") 
+        .store-name
+          | 茂业天地
+          .address  茂业天地 二期 三层
+      img.display(src="/images/top3.jpg", alt="")
+      .store-wrap.top2   
+        img.rank-num.wow.bounceInRight(src="/images/top2.png", alt="")
+        .store-name
+          | 茂业天地
+          .address  茂业天地 二期 三层
+      .store-wrap.top3  
+        img.rank-num.wow.bounceInLeft(src="/images/top3.png", alt="") 
+        .store-name
+          | 茂业天地
+          .address  茂业天地 二期 三层
+          
+      .leaf-box
+        img(src="/images/rank-sec1.png", alt="")
+      .leaf-box2
+        img(src="/images/rank-sec2.png", alt="")
+    .block.cooperation
+      .header
+        .title 
+          | HEZUOPINPAI
+          .title-text 合作品牌    
+      .block-content
+        .row
+          .col-lg-4
+            img(src="/images/hezuo/logo1.jpg", alt="")
+            p 合作品牌
+          .col-lg-4
+            img(src="/images/hezuo/logo1.jpg", alt="")
+            p 合作品牌
+          .col-lg-4
+            img(src="/images/hezuo/logo1.jpg", alt="")
+            p 合作品牌
+    .about
+      .about-text
+        img(src="/images/aboutTitle.jpg", alt="")  
+        p 百雀羚创立于1931年，是国内屈指可数的历史悠久的著名化妆品厂商。悠久的历史，承载着光辉的业绩，成就了百雀羚品质如金的美誉。品牌曾被多次评选为“上海著名商标”，并荣获“中国驰名商标”等称号。公司先后与美国Disne
+        p 日本ASTRO BOY等国际公司合作，推出了迪士尼、阿童木等儿童护理产品系列。传承经典，勇于创新，公司致力于为消费者创造天然温和的优质护肤品，完美演绎“中国传奇，东方之美”。 
+      .about-pic.pull-right
+        img.prd-gb(src="/images/about-pic.jpg", alt="")
+        img.about-prd-pic(src="/images/about-prd.png", alt="")
+  script.
+    new WOW().init();
+  
+  
+            

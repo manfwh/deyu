@@ -1,0 +1,296 @@
+
+/* banner */
+
+
+
+/* 产品展示 */
+.prod-tabs .cate{
+    height: 75px;
+    text-align: center;
+    position: relative;
+    padding-top: 18px;
+    font-size: 18px;
+    color: #4b4b4b;
+    cursor: pointer;
+}
+.prod-tabs .cate img {
+    display: none;
+}
+.prod-tabs .active img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 75px;
+    height: 75px;
+    margin-left: -37px;
+    margin-top: -37px;
+    z-index: -1;
+    display: block;
+}
+.prod-tabs .cate span {
+    color: #b4bcb9;
+}
+.tab-content {
+    margin-top: 90px;
+}
+.tab-content .product {
+    height: 344px;
+    padding-top: 20px;
+    position: relative;
+    border: 2px solid #fff;
+    transition: all .2s;
+}
+.product-title {
+    text-align: center;
+    color: #4b4b4b;
+}
+.product .line {
+    border-bottom: 1px solid #986e50;
+    margin: 8px 0;
+}
+.product:hover {
+    border: 2px solid #000;
+}
+.product:hover::after {
+    content: '';
+    width: 16px;
+    height: 14px;
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all .2s;
+    
+}
+/* 公司动态 */
+.news-box {
+    position: relative;
+    margin-top: 150px;
+}
+.news-box .left {
+    padding: 47px;
+    position: relative;
+    width: 798px;
+    height: 504px;
+    z-index: -2;
+    float: left;
+    background: url('/images/dongtai/1.png');
+}
+.news-box .left .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #056c1a;
+    opacity: 0.6;
+    z-index: -1;
+}
+.news-box .left .inner-box {
+    width: 100%;
+    height: 100%;
+    border: 10px solid #fff;
+    color: #fff;
+    font-size: 44px;
+    text-align: center;
+    padding-top: 120px;
+    
+}
+.news-box .pic-wrap {
+    width: 172px;
+    height: 426px;
+    position: absolute;
+    left: 675px;
+    top: 173px;
+    z-index: 11;
+    background: url('/images/sec1.png');
+    box-shadow: 0 0 10px 0 #666;
+}
+.news-box .right {
+    width: 322px;
+    height: 412px;
+    float: left;
+    box-shadow: 0px 0px 20px 0px rgba(80, 152, 95, 0.88);  
+    margin-top: 46px;
+    padding: 50px 35px 0 0;
+    text-align: right;
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+}
+.news-box .sec2 {
+    width: 840px;
+    height: 575px;
+    position: absolute;
+    top: 257px;
+    left: 700px;
+    z-index: -2;
+    background: url(/images/sec2.png)
+}
+.news-box .right .tit {
+    margin-bottom: 30px;
+}
+.discount {
+    margin-top: 60px;
+    margin-right: -55px;
+}
+.discount div {
+    float: right;
+}
+.discount .discount-text {
+    width: 110px;
+    height: 80px;
+    padding: 20px 40px 0 20px;
+    background: #056c1a;
+    opacity: 0.6;
+    color: #fff;
+    font-size: 18px;
+}
+.discount .discount-num {
+    line-height: 80px;
+    color: #50985f;
+    font-style: italic;
+    font-size: 44px;
+    margin-right: 24px;
+}
+.news-box .right .more {
+    float: right;
+    margin-top: 40px;
+    border-bottom: 4px solid #999;
+    line-height: 36px;
+    font-size: 22px;
+}
+.more-btn {
+    margin: 70px 0 0 200px;
+    padding-bottom: 30px;
+    background: url('/images/sprites.png') no-repeat 0 50px;
+}
+
+/* 门店排行 */
+#rank {
+    position: relative;
+    margin-top: 350px;
+}
+.store-wrap {
+    width: 510px;
+    height: 614px;
+    
+    position: absolute;
+    z-index: 10;
+}
+.store-wrap.top1 {
+    background: url(/images/median/1.jpg) no-repeat;
+}
+.store-wrap.top2{
+    background: url(/images/median/1.jpg) no-repeat;
+}
+.store-wrap.top3{
+    background: url(/images/median/1.jpg) no-repeat;
+}
+.top2{
+    left: 630px;
+    top: 402px;
+}
+.top3{
+    left: 50px;
+    top: 723px;
+}
+.leaf-box {
+    width: 750px;
+    height: 500px;
+    background: #404040;
+    position: relative;
+    margin-left: -320px;
+    top: 353px;
+}
+.leaf-box2 {
+    position: relative;
+    right: -100%;
+    top: 700px;
+}
+.store-name {
+    width: 350px;
+    height: 122px;
+    background: #fff;
+    padding-left: 122px;
+    font-size: 36px;
+    position: absolute;
+    padding-top: 24px;
+    text-align: right;
+    padding-right: 70px;
+}
+.store-name .address {
+    font-size: 14px;
+    color: #999;
+}
+
+.rank-num {
+    position: absolute;
+    z-index: 10;
+
+}
+.top1 .rank-num {
+    top: -50px;
+    left: 70px;
+}
+.top2 .rank-num {
+    top: 136px;
+    left: -85px;
+}
+.top3 .rank-num {
+    bottom: -70px;
+    left: 58px;
+}
+.top1 .store-name {
+    right: 40px;
+    top: 40px;
+}
+.top2 .store-name {
+    left: 0;
+    top: 196px;
+}
+.top3 .store-name {
+    right: 30px;
+    bottom: 30px;
+}
+.display {
+    float: right;
+    width: 525px;
+    height: 409px;
+}
+
+
+
+
+/* 合作品牌 */
+.cooperation {
+    margin-top: 600px;
+}
+.cooperation .row img {
+    width: 317px;
+    height: 249px;
+    border: 8px solid #63a371;
+}
+.cooperation .row p {
+    background: #63a371;
+    width: 317px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    height: 90px;
+    line-height: 90px;
+}
+
+
+
+
+
+
+/* 底部 */
+footer.footer {
+    margin-top: -260px;
+}
+
+  

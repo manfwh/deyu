@@ -1,0 +1,200 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/product.css")
+  link(rel="stylesheet", href="/bower_components/swiper/dist/css/swiper.min.css")
+block append scripts
+  script(src="/bower_components/swiper/dist/js/swiper.min.js")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页
+                
+            li.active
+                a(href="/product") 产品介绍
+                .selected
+            li
+                a(href="/entityShop") 实体店铺
+            li
+                a(href="/about")  关于我们
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  .container
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+          a(href="#") Home  
+          | 
+        li
+          a(href="/product") 新品推荐  
+          |  
+        li.active 商品详情
+    .switchPic
+      ul.smallPic-wrap
+        li.active
+          .mask
+          img(src="/images/bigPic1.jpg", alt="")
+        li
+          .mask
+          img(src="/images/bigPic2.jpg", alt="")
+        li
+          .mask
+          img(src="/images/bigPic3.jpg", alt="")
+        li
+          .mask
+          img(src="/images/bigPic4.jpg", alt="")
+      .bigImgWrap
+        #mask.hidden-xs
+        .move.hidden-xs
+        .bigImgWrapPlus.hidden-xs
+          img(src="/images/bigPic.jpg", alt="")
+        img.pic.img-responsive(src="/images/bigPic1.jpg", alt="", style="display:block")
+        img.pic.img-responsive(src="/images/bigPic2.jpg", alt="")
+        img.pic.img-responsive(src="/images/bigPic3.jpg", alt="")
+        img.pic.img-responsive(src="/images/bigPic4.jpg", alt="")
+      .product
+        h2 PURE &  NATURAL
+        h1.title 牛奶竹笋青叶嫩白精华身体乳
+        p.text-muted  玛茜四倍蚕丝保湿乳液修护爽肤补水面霜清爽控，油滋养乳液护肤品女玛茜四倍蚕丝保湿乳液修护爽肤补水面霜清爽控，油滋养乳液护肤品女
+        .product-price.mt-50
+          span ￥
+          |  PRICE
+          div
+            strong.nowPrice ￥1999.00
+            s ￥2999.00
+        .product-ops.mt-50
+          span 
+            span.glyphicon.glyphicon-th-large
+            |  OPTIONS
+          .row
+            .col-xs-2  补水
+            .col-xs-2  保湿
+            .col-xs-2  补水
+            .col-xs-2  保湿
+  .recommend.mt-50
+    h3  
+      | 相关推荐
+      .small RELATED RECOMMENDATIONS  
+    img.rightPic.img-responsive(src="/images/yezi1.png", alt="").hidden-xs
+    img.leftPic.img-responsive(src="/images/yezi2.png", alt="").hidden-xs
+    .container
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img.img-responsive(src="/images/tj1.jpg", alt="")
+            .wrap.hidden-xs
+              .tit  深层滋养新技术
+              p  来自美国最新萃取技术
+              span.tj-price 1999.00
+          .swiper-slide
+            img.img-responsive(src="/images/tj1.jpg", alt="") 
+            .wrap.hidden-xs
+              .tit  深层滋养新技术
+              p  来自美国最新萃取技术
+              span.tj-price 1999.00
+          .swiper-slide
+            img.img-responsive(src="/images/tj1.jpg", alt="") 
+            .wrap.hidden-xs
+              .tit  深层滋养新技术
+              p  来自美国最新萃取技术
+              span.tj-price 1999.00
+          .swiper-slide
+            img.img-responsive(src="/images/tj1.jpg", alt="")
+            .wrap.hidden-xs
+              .tit  深层滋养新技术
+              p  来自美国最新萃取技术
+              span.tj-price 1999.00
+          .swiper-slide
+            img.img-responsive(src="/images/tj1.jpg", alt="") 
+            .wrap.hidden-xs
+              .tit  深层滋养新技术
+              p  来自美国最新萃取技术
+              span.tj-price 1999.00
+          .swiper-slide
+            img.img-responsive(src="/images/tj1.jpg", alt="") 
+            .wrap.hidden-xs
+              .tit  深层滋养新技术
+              p  来自美国最新萃取技术
+              span.tj-price 1999.00
+        .swiper-button-next.hidden-xs
+        .swiper-button-prev.hidden-xs
+  .container.shadow
+    .product-detail
+      img.img-responsive.center-block(src="/images/topPic.png", alt="")
+      img.img-responsive(src="/images/detail1.jpg", alt="")
+      img.img-responsive(src="/images/detail2.jpg", alt="")
+      img.img-responsive(src="/images/detail3.jpg", alt="")
+      img.img-responsive(src="/images/detail4.jpg", alt="")
+  script.
+      $(function() {
+          var activeIndex = 0;
+          $('.smallPic-wrap li').click(function() {
+              $(this).addClass('active').siblings().removeClass('active');
+              $('.bigImgWrap .pic').fadeOut();
+              var index = $(this).index();
+              activeIndex = index;
+              $('.bigImgWrap .pic').eq(index).fadeIn()
+              $('.bigImgWrapPlus img').attr('src', $('.bigImgWrap .pic').eq(index).attr('src') )
+          })
+
+        // 相关推荐
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            autoplay: true
+            
+        })
+        //  放大镜
+        $('#mask').mousemove(function(e) {
+            var $move = $('.move')
+            var moveWidth = $move.width();
+            var w =  $(this).width();
+            var h = $(this).height()
+            var left = e.offsetX - moveWidth/2, top = e.offsetY - moveWidth/2;
+            if(left < 0) {
+                left = 0;
+            }
+            if(e.offsetX > w - moveWidth/2) {
+                left =  w - moveWidth
+            }
+            if(top < 0) {
+                top = 0;
+            }
+            if(e.offsetY > h - moveWidth / 2) {
+                top =  h - moveWidth
+            }
+            $move.css({
+                left: left,
+                top: top
+            })
+            $('.bigImgWrapPlus img').css({
+                transform: 'translate(' + -left*2 + 'px,' + -top*2 + 'px)'
+            })
+        })
+        $('#mask').mouseover(function() {
+            $('.move').show();
+            $('.bigImgWrapPlus').show();
+            $('.bigImgWrapPlus img').css({
+                width: $(this).width()*2,
+                height: $(this).height()*2,
+            })
+
+        })
+        $('#mask').mouseleave(function() {
+            $('.move').hide()
+            $('.bigImgWrapPlus').hide()
+        })
+      })
+  

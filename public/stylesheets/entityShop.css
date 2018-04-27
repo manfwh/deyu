@@ -1,0 +1,163 @@
+/* 体验区 */
+.box {
+    margin-top: 80px;
+}
+.box .box-title {
+    text-align: center;
+}
+.box .box-title h3 {
+    font-size: 48px;
+    color: #85b890;
+}
+.box .box-content {
+    margin-top: 50px;
+}
+.box .box-title h2 {
+    font-size: 44px;
+    color: #85b890;
+}
+.box .box-title span {
+    font-size: 48px;
+    color: #85b890;
+    font-weight: bold;
+}
+.ty-shop-des {
+    border: 2px solid #dcdcdc;
+    background: #f1f1f1;
+    width: 571px;
+    height: 399px;
+    padding: 70px;
+    
+}
+.ty-shop-des p {
+    color: #9c9c9c;
+    font-size: 24px;
+}
+
+.ty-shop-des h3 {
+    font-size: 44px;
+    color: #7b7b7b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.ty-shop-des .more {
+    width: 80px;
+    height: 24px;
+    background: #b8b8b8;
+    color: #fff;
+    line-height: 24px;
+    display: block;
+    text-align: center;
+    float: right;
+    margin-top: 15px;
+}
+.ty2 {
+    background: none;
+    border: none;
+    margin-top: -400px;
+}
+.ty2 .more {
+    background-color: #f00101;
+}
+.ty2 h3, .ty2 p, .ty2 span {
+    color: #fff;
+}
+.ty3 .ty-shop-des {
+    height: 300px;
+    padding: 35px;
+}
+.tyNavPage  {
+    width: 386px;
+    height: 99px;
+    background: #596380;
+}
+.tyNavPage .pages {
+    margin-top: 10px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background: #596380;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    border-color: #596380;
+}
+.tyNavPage .pages .active a {
+    background: #596380;
+}
+/* 全部店铺 */
+.box2 {
+    margin-top: 150px;
+}
+.box2 .box-title h2 {
+    font-weight: bold;
+    font-size: 40px;
+}
+.box2 .box-content {
+    margin-top: 80px;
+}
+.box2 .col-lg-4 {
+    margin-top: 30px;
+}
+.shop-item {
+    border: none;
+    position: relative;
+    transition: all 0.4s;
+    padding: 26px;
+}
+.shop-item .newShop {
+    width: 110px;
+    height: 34px;
+    background: #939393;
+    color: #fff;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    margin-left: -55px;
+    text-align: center;
+    line-height: 34px;
+}
+.shop-item img {
+    
+}
+.shop-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.shop-item h3 span {
+    font-style: italic;
+    float: right;
+    font-size: 18px;
+}
+.shop-item:hover {
+    box-shadow: 0 0 36px 0 #ccc;
+}
+.shop-item h3 span::before {
+    content: '';
+    background-color: #666;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.footer {
+    margin-top: 0;
+}
+
+
+/*********************************************  详情页面 *********************************************/
+
+article .line {
+    width: 100px;
+    height: 3px;
+    background: #747474;
+    margin: 20px 0;
+}
+article h2 {
+    font-size: 26px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 30px;
+}

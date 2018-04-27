@@ -1,0 +1,89 @@
+.title .small{
+    margin-top: 20px;
+    font-size: 50%;
+}
+.barPic {
+    margin: 0;
+}
+
+h2 {
+    font-size: 48px;
+    margin-top: 60px;
+    
+}
+.job {
+    padding-left: 50px;
+}
+dt {
+    margin: 10px 0;
+}
+dd {
+    line-height: 30px;
+}
+
+
+
+
+/*************************** 合作招募页面 ***************************/
+.leftPic {
+    position: absolute;
+    bottom: 200px;
+    left: -100px;
+}
+.form-wrap  {
+    border: 2px solid #d5d9ff;
+    position: relative;
+    padding: 80px 54px;
+}
+.form-wrap button {
+    background: #1282f2;
+    color: #fff;
+    border-radius: 0;
+    border: 2px solid #fff;
+}
+.form-wrap button:hover,.form-wrap button:focus {
+    background: #2f8fef;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-wrap {
+    background: #2f8fef;
+    padding: 5px;
+}
+.topLeftPic {
+    position: absolute;
+    top: -70px;
+    left: -25px;
+}
+.bottomRightPic {
+    position: absolute;
+    right: -450px;
+    bottom: 0;
+}
+
+
+/************************** OA办公页面 **************************/
+.barPic {
+    margin: 0;
+}
+.shadow {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.oaBarWrap {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.caption {
+    padding-left: 20px;
+}
+.caption h3 {
+    font-weight: bold;
+}
+.pages .active a, .pages .active a:hover{
+    background: #000;
+}
+.items {
+    padding-left: 150px;
+    padding-right: 40px;
+}

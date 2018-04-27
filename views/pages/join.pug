@@ -1,0 +1,75 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/hr.css")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+            li
+                a(href="/entityShop") 实体店铺
+            li
+                a(href="/about")  关于我们
+            li.active
+                a(href="/join")  合作招募
+                .selected 
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  //-   img.leftPic(src="/images/joinPic1.png", alt="")
+  .container
+    .top-bar.hidden-xs
+    //- 导航 搜索框
+    .topBar.clearfix.mt-50
+      ol._breadcrumb.pull-left
+        li
+          a(href="/") 首页 
+       
+        li.active  合作招募
+    .block
+      .header
+        .title 
+          | HEZUOZHAOMU
+          h1.title-text 合作招募  
+      .block-content
+        .col-lg-10.col-lg-offset-1.form-wrap    
+          img.img-responsive.topLeftPic(src="/images/joinPic2.png", alt="")
+          img.img-responsive.bottomRightPic(src="/images/joinPic3.jpg", alt="")
+          form(action="/join", method="post")
+            .col-sm-6
+               .form-group
+                 label(for="name") 姓名
+                 input#name.form-control(type="text", placeholder="姓名", name="name")
+            .col-sm-6
+              .form-group
+                label(for="city") 城市
+                input#city.form-control(type="text", placeholder="城市", name="city")
+           
+            .col-sm-6 
+              .form-group
+                label(for="phone") 电话
+                input#phone.form-control(type="number", placeholder="手机号", name="phone")
+            .col-sm-6 
+              .form-group
+                label(for="email") 邮箱
+                input#email.form-control(type="email", placeholder="email", name="email")
+            .col-sm-12
+              .form-group
+                label(for="remarks") 备注
+                textarea.form-control(rows="6")
+            .col-sm-4.col-sm-offset-4
+              .btn-wrap.mt-50
+                button.btn.btn-default.btn-lg.btn-block(type='submit') 提交
+  script.
+    new WOW().init();
+  
+    
+
+      
+    

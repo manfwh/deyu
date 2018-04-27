@@ -1,0 +1,99 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/hr.css")
+  link(rel="stylesheet", href="/bower_components/swiper/dist/css/swiper.min.css")
+block append scripts
+  script(src="/bower_components/swiper/dist/js/swiper.min.js")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+            li
+                a(href="/entityShop") 实体店铺
+            li
+                a(href="/about")  关于我们
+            li
+                a(href="/join")  合作招募
+            li.active
+                a(href="/hr")  诚聘英才
+                .selected 
+            li
+                a(href="/oa")  OA办公
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+    //- 导航 搜索框
+  .container.shadow
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+            a(href="/") 首页 
+            |  
+        li.active 诚聘英才
+      //- .searchWrap.pull-right
+      //-   .pull-left
+      //-     .btn-group
+      //-       .btn.btn-default.dropdown-toggle.cate-btn(data-toggle="dropdown")
+      //-           | 全部 
+      //-           span.caret
+      //-       ul.dropdown-menu
+      //-         li
+      //-           a(href="#") 分类一
+      //-         li
+      //-           a(href="#") 分类二
+      //-   .input-wrap.pull-left
+      //-     input(type="text", placeholder="搜索职位关键字")
+      //-   .search-wrap
+      //-     button.btn.btn-default
+      //-       span.glyphicon.glyphicon-search
+    h1.title.mt-50
+      | 热招工作岗位    
+      .small COMFORTABLE  ENVIRONMENT  
+    .row.mt-50
+      .col-lg-6
+        img(src="/images/job.jpg", alt="").img-responsive
+      .col-lg-6.job
+        h2.wow.bounceInUp  web前端开发工程师
+        .row.mt-50.wow.bounceInRight(data-wow-delay="0.5s")
+          .col-xs-4  工作地点: 太原
+          .col-xs-4  工资待遇: 面议
+          .col-xs-4  发布日期: 2018-4-26
+          .col-xs-4  需求人数: 8
+          .col-xs-4  有效期限: 长期
+        dl.wow.bounceInRight(data-wow-delay="1s")
+          dt 岗位描述: 
+          dd 负责主站的开发维护，参与部分专题页的页面制作；负责移动M站的开发与维护，参与M站专题制作；负责部分后台管理页面的制作。
+          dt 基本要求: 
+          dd 精通JavaScript，html，css，理解原型链，精通CSS语义化；能够很好的解决浏览器兼容和跨平台兼容；熟悉各种前端工具,UI框架,jquery,bootstrap,react；
+        a(href="").btn.btn-danger  申请职位
+    
+    .row.mt-50
+      .col-lg-6.job
+        h2.wow.bounceInUp  ui设计师
+        .row.mt-50.wow.bounceInRight(data-wow-delay="0.5s")
+          .col-xs-4  工作地点: 太原
+          .col-xs-4  工资待遇: 面议
+          .col-xs-4  发布日期: 2018-4-26
+          .col-xs-4  需求人数: 8
+          .col-xs-4  有效期限: 长期
+        dl.wow.bounceInRight(data-wow-delay="1s")
+          dt 岗位描述: 
+          dd 结合业务需求完成页面的交互原型设计、视觉界面设计；
+          dt 基本要求: 
+          dd 精通photoshop、Coredraw、AI等设计软件，对flash、前端HTML/CSS有一定的了解;
+        a(href="").btn.btn-danger  申请职位
+      .col-lg-6
+        img(src="/images/job.jpg", alt="").img-responsive
+
+
+    
+  script.
+    new WOW().init();
+  
+    
+
+      
+    

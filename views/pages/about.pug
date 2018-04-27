@@ -1,0 +1,158 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/about.css")
+  link(rel="stylesheet", href="/bower_components/swiper/dist/css/swiper.min.css")
+block append scripts
+  script(src="/bower_components/swiper/dist/js/swiper.min.js")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+                
+            li
+                a(href="/entityShop") 实体店铺
+                
+            li.active
+                a(href="/about")  关于我们
+                .selected
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  .jumbotron.text-center
+    h1.wow.bounceInUp  COOPERATION IS THE DRIVING FORCE
+  .main.container
+    .top-bar.hidden-xs
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+          a(href="/") 首页 
+       
+        li.active  关于我们
+    .row
+      .col-lg-6
+        p.text-muted.mt-50  WELCOME TO ARUPE
+        h3.wow.bounceInUp 我们的目标和价值观<span>支撑</span>着我们所做的一切
+        .line
+        p.text-muted.mt-50 合作是SOM实践的主导动力，因为我们认为最佳的结果源自与所有利益相关者的持续沟通。我们将客户视为合作伙伴，并将每个项目看作一项独特的挑战。我们的综合事务所汇聚了建筑、内饰、工程和城市规划领域的专家，共同打造创新的解决方案。
+      .col-lg-6
+        img(src="/images/about.jpg", alt="")
+    .bar-Pic
+      .row
+        .col-sm-4.wow.bounceInUp
+          .num 36
+          p Enterprise image
+        .col-sm-4.wow.bounceInUp
+          .num 570
+          p  Corporate culture
+        .col-sm-4.wow.bounceInUp
+          .num  167+
+          p  Enterprise concept
+    //- 团队
+    .team-wrap
+      .row.mt-50
+        .col-lg-6
+          h2 顶级运营团队
+          p  WORLD TOP OPERATION TEAM
+        .col-lg-6.hidden-xs
+          .pull-right.text TOP OPERATION TEAM
+      .swiper-container
+        .swiper-wrapper
+            .swiper-slide
+                img.img-responsive(src="/images/team.jpg", alt="")
+            .swiper-slide
+                img.img-responsive(src="/images/team.jpg", alt="")
+            .swiper-slide 
+                img.img-responsive(src="/images/team.jpg", alt="")
+            .swiper-slide
+                img.img-responsive(src="/images/team.jpg", alt="")
+            .swiper-slide
+                img.img-responsive(src="/images/team.jpg", alt="")
+            .swiper-slide 
+                img.img-responsive(src="/images/team.jpg", alt="")
+    //- 最新动态
+    .news.mt-50
+      .box
+        .box-title
+          h3 <span>PROJECT   </span>  INTRODUCTION
+          p  REPUBLIC OF KOREA SEOUL CITY SKYSCRAPERS
+          h2 最新动态
+      ol.wow
+        li.news.mt-50.clearfix
+          img(src="/images/newsTop1.jpg", alt="").pull-left.mt-31
+          img(src="/images/newsPic.jpg", alt="").pull-left
+          .news-content.pull-left.mt-31
+            .arraw 
+           
+            h4.news-title.wow.bounceInUp 北京绿地能源广场
+            p.text-muted  我们的目标 始终如一感受创世纪
+            p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+        li.news.mt-50.clearfix
+          img(src="/images/newsTop2.jpg", alt="").pull-left.mt-31
+          img(src="/images/newsPic.jpg", alt="").pull-left
+          .news-content.pull-left.mt-31
+            .arraw 
+            h4.news-title 北京绿地能源广场
+            p.text-muted  我们的目标 始终如一感受创世纪
+            p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+        li.news.mt-50.clearfix
+          img(src="/images/newsTop3.jpg", alt="").pull-left.mt-31
+          img(src="/images/newsPic.jpg", alt="").pull-left
+          .news-content.pull-left.mt-31
+            .arraw 
+            h4.news-title 北京绿地能源广场
+            p.text-muted  我们的目标 始终如一感受创世纪
+            p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+      nav.pages.text-center(aria-label='Page navigation')
+        ul.pagination
+            li
+                a(href='#', aria-label='Previous')
+                    span(aria-hidden='true') &laquo;
+            li.active
+                a(href='#') 1
+            li
+                a(href='#') 2
+            li
+                a(href='#') 3
+            li
+                a(href='#') 4
+            li
+                a(href='#') 5
+            li
+                a(href='#', aria-label='Next')
+                    span(aria-hidden='true') &raquo;   
+      .about
+        .about-text
+            img(src="/images/aboutTitle.jpg", alt="")  
+            p 百雀羚创立于1931年，是国内屈指可数的历史悠久的著名化妆品厂商。悠久的历史，承载着光辉的业绩，成就了百雀羚品质如金的美誉。品牌曾被多次评选为“上海著名商标”，并荣获“中国驰名商标”等称号。公司先后与美国Disne
+            p 日本ASTRO BOY等国际公司合作，推出了迪士尼、阿童木等儿童护理产品系列。传承经典，勇于创新，公司致力于为消费者创造天然温和的优质护肤品，完美演绎“中国传奇，东方之美”。 
+        .about-pic.pull-right.hidden-xs
+            img.prd-gb(src="/images/about-pic.jpg", alt="")
+            img.about-prd-pic(src="/images/about-prd.png", alt="").wow.bounceInRight
+  script.
+    new WOW().init();
+    var swiper = new Swiper('.swiper-container', {
+        autoplay:true,
+        spaceBetween : 45,
+       slidesPerView : 2,
+       centeredSlides : true,
+    });
+
+    
+
+      
+    

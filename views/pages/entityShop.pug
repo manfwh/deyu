@@ -1,0 +1,194 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/entityShop.css")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+                
+            li.active
+                a(href="/entityShop") 实体店铺
+                .selected
+            li
+                a(href="/about")  关于我们
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  .container
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+            a(href="/") 首页 
+            |  
+        li.active 实体店铺
+      //- .searchWrap.pull-right
+      //-   .pull-left
+      //-     .btn-group
+      //-       .btn.btn-default.dropdown-toggle.cate-btn(data-toggle="dropdown")
+      //-         | 分类 
+      //-         span.caret
+      //-       ul.dropdown-menu
+      //-         li
+      //-           a(href="#") 分类一
+      //-         li
+      //-           a(href="#") 分类二
+      //-   .input-wrap.pull-left
+      //-     input(type="text", placeholder="搜索今日新品吧...")
+      //-   .search-wrap
+      //-     button.btn.btn-default
+      //-       span.glyphicon.glyphicon-search
+    //-  体验区
+    .box
+      .box-title
+        h3 <span>PROJECT   </span>  INTRODUCTION
+        p  REPUBLIC OF KOREA SEOUL CITY SKYSCRAPERS
+        h2 体验区
+      .box-content
+        .row
+          .ty-shop.clearfix
+            img.pull-left.img-responsive(src="/images/tyShop.jpg", alt="")
+            .ty-shop-des.pull-left
+              a(href="/entityShop/2")
+                h3.wow.bounceInUp MODERN BUILDING
+              p.wow.bounceInRight(data-wow-delay="0.2s") 我们的目标
+              p.wow.bounceInRight(data-wow-delay="0.4s") 和价值观支撑着我们所做的一切
+              p.hot.clearfix.wow.bounceInRight(data-wow-delay="0.6s")
+                  span.pull-left.mr-40 256人浏览
+                  span.pull-left 2017-6-23
+              a(href="/entityShop/2").more  more  >
+          .ty-shop
+            div.mr-20.clearfix
+              img.pull-right(src="/images/tyShop2.jpg", alt="")
+              .ty-shop-des.pull-left.ty2
+                a(href="/entityShop/2")
+                  h3.wow.bounceInUp MODERN BUILDING
+                p.wow.bounceInLeft(data-wow-delay="0.2s")  我们的目标
+                p.wow.bounceInLeft(data-wow-delay="0.2s")  和价值观支撑着我们所做的一切
+                p.hot.clearfix.wow.bounceInLeft(data-wow-delay="0.6s")
+                    span.pull-left.mr-40 256人浏览
+                    span.pull-left 2017-6-23
+                a(href="/entityShop/2").more  more  >
+          .ty-shop.clearfix.ty3
+            img.pull-left.img-responsive(src="/images/tyShop.jpg", alt="")
+            .ty-shop-des.pull-left
+              a(href="/entityShop/2")
+                h3.wow.bounceInUp MODERN BUILDING
+              p.wow.bounceInRight(data-wow-delay="0.2s")  我们的目标
+              p.hot.clearfix.wow.bounceInRight(data-wow-delay="0.6s")
+                  span.pull-left.mr-40 256人浏览
+                  span.pull-left 2017-6-23
+              a(href="#").more  more  >
+            .pull-left.tyNavPage
+              nav.pages.text-center(aria-label='Page navigation')
+                ul.pagination
+                    li
+                        a(href='#', aria-label='Previous')
+                            span(aria-hidden='true') &laquo;
+                    li.active
+                        a(href='#') 1
+                    li
+                        a(href='#') 2
+                    li
+                        a(href='#') 3
+                    li
+                        a(href='#') 4
+                    li
+                        a(href='#') 5
+                    li
+                        a(href='#', aria-label='Next')
+                            span(aria-hidden='true') &raquo;   
+
+    //- 全部店铺
+    .box2
+      .box-title.text-center
+        h2  全部店铺
+        p  PROJECT INTRODUCTION
+      .box-content
+        .row.mlr-50
+          a(href="/entityShop/2").col-lg-4
+            .shop-item.thumbnail
+              img.img-responsive(src="/images/shop.jpg", alt="")
+              .caption
+                h3 
+                  | 菲律宾马尼拉大都会
+                  span HOT
+                p.text-hidden  始终如一，感受设计新纪元始终如一，感受设计新纪元
+                p.hot
+                  span.pull-left.mr-40 256人浏览
+                  span.pull-left 2017-6-23
+          a(href="/entityShop/2").col-lg-4.newShop
+            .shop-item.thumbnail
+              .newShop  THE NEW
+              img.img-responsive(src="/images/shop.jpg", alt="")
+              .caption
+                h3 
+                  | 菲律宾马尼拉大都会
+                  span HOT
+                p.text-hidden  始终如一，感受设计新纪元始终如一，感受设计新纪元
+                p.hot
+                  span.pull-left.mr-40 256人浏览
+                  span.pull-left 2017-6-23
+          a(href="/entityShop/2").col-lg-4
+            .shop-item.thumbnail
+              img.img-responsive(src="/images/shop.jpg", alt="")
+              .caption
+                h3 
+                  | 菲律宾马尼拉大都会
+                  span HOT
+                p.text-hidden  始终如一，感受设计新纪元始终如一，感受设计新纪元
+                p.hot
+                  span.pull-left.mr-40 256人浏览
+                  span.pull-left 2017-6-23
+          a(href="/entityShop/2").col-lg-4.newShop
+            .shop-item.thumbnail
+              .newShop  THE NEW
+              img.img-responsive(src="/images/shop.jpg", alt="")
+              .caption
+                h3 
+                  | 菲律宾马尼拉大都会
+                  span HOT
+                p.text-hidden  始终如一，感受设计新纪元始终如一，感受设计新纪元
+                p.hot
+                  span.pull-left.mr-40 256人浏览
+                  span.pull-left 2017-6-23
+          a(href="/entityShop/2").col-lg-4
+            .shop-item.thumbnail
+              img.img-responsive(src="/images/shop.jpg", alt="")
+              .caption
+                h3 
+                  | 菲律宾马尼拉大都会
+                  span HOT
+                p.text-hidden  始终如一，感受设计新纪元始终如一，感受设计新纪元
+                p.hot
+                  span.pull-left.mr-40 256人浏览
+                  span.pull-left 2017-6-23
+    nav.pages.text-center(aria-label='Page navigation')
+        ul.pagination
+            li
+                a(href='#', aria-label='Previous')
+                    span(aria-hidden='true') &laquo;
+            li.active
+                a(href='#') 1
+            li
+                a(href='#') 2
+            li
+                a(href='#') 3
+            li
+                a(href='#') 4
+            li
+                a(href='#') 5
+            li
+                a(href='#', aria-label='Next')
+                    span(aria-hidden='true') &raquo; 
+  script.
+    new WOW().init();  

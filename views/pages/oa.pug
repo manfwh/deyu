@@ -1,0 +1,181 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/hr.css")
+  link(rel="stylesheet", href="/bower_components/swiper/dist/css/swiper.min.css")
+block append scripts
+  script(src="/bower_components/swiper/dist/js/swiper.min.js")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+            li
+                a(href="/entityShop") 实体店铺
+            li
+                a(href="/about")  关于我们
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li.active
+                a(href="/oa")  OA办公
+                .selected
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  .container.shadow
+    .top-bar.hidden-xs
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+          a(href="/") 首页 
+       
+        li.active  OA办公
+      .searchWrap.pull-right
+        .pull-left
+          .btn-group
+            .btn.btn-default.dropdown-toggle.cate-btn(data-toggle="dropdown")
+              | 全部 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href="#") 行政文件
+              li
+                a(href="#") VIS资料
+              li
+                a(href="#") 培训资料
+              li
+                a(href="#") 策划方案
+              li
+                a(href="#") 产品资料
+        
+        .input-wrap.pull-left
+          input(type="text", placeholder="搜索今日新品吧...")
+        .search-wrap
+          button.btn.btn-default
+            span.glyphicon.glyphicon-search
+    //- 资料提取
+    h2.text-center.mt-50 资料提取
+    .news.mt-50
+     
+      ol.wow
+        li.news.mt-50.clearfix
+          img(src="/images/newsTop1.jpg", alt="").pull-left.mt-31
+          img(src="/images/newsPic.jpg", alt="").pull-left
+          .news-content.pull-left.mt-31
+            .arraw 
+           
+            h4.news-title 北京绿地能源广场
+            p.text-muted  我们的目标 始终如一感受创世纪
+            p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+        li.news.mt-50.clearfix
+          img(src="/images/newsTop2.jpg", alt="").pull-left.mt-31
+          img(src="/images/newsPic.jpg", alt="").pull-left
+          .news-content.pull-left.mt-31
+            .arraw 
+            h4.news-title 北京绿地能源广场
+            p.text-muted  我们的目标 始终如一感受创世纪
+            p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+        li.news.mt-50.clearfix
+          img(src="/images/newsTop3.jpg", alt="").pull-left.mt-31
+          img(src="/images/newsPic.jpg", alt="").pull-left
+          .news-content.pull-left.mt-31
+            .arraw 
+            h4.news-title 北京绿地能源广场
+            p.text-muted  我们的目标 始终如一感受创世纪
+            p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+      nav.pages.text-center(aria-label='Page navigation')
+        ul.pagination
+            li
+                a(href='#', aria-label='Previous')
+                    span(aria-hidden='true') &laquo;
+            li.active
+                a(href='#') 1
+            li
+                a(href='#') 2
+            li
+                a(href='#') 3
+            li
+                a(href='#') 4
+            li
+                a(href='#') 5
+            li
+                a(href='#', aria-label='Next')
+                    span(aria-hidden='true') &raquo;   
+    .oaBarWrap
+      img.img-responsive(src="/images/oaBarPic.jpg", alt="")
+    h2.text-center 最新展览
+    .row.mt-50.items
+      .col-lg-6
+        img(src="/images/zhanlan.jpg", alt="").pull-left
+        .caption.pull-left
+          h3 北京绿地广场
+          p  我们的目标 始终如一
+          p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+      .col-lg-6
+        img(src="/images/zhanlan.jpg", alt="").pull-left
+        .caption.pull-left
+          h3 北京绿地广场
+          p  我们的目标 始终如一
+          p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23 
+    .row.mt-50.items
+      .col-lg-6
+        img(src="/images/zhanlan.jpg", alt="").pull-left
+        .caption.pull-left
+          h3 北京绿地广场
+          p  我们的目标 始终如一
+          p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23
+      .col-lg-6
+        img(src="/images/zhanlan.jpg", alt="").pull-left
+        .caption.pull-left
+          h3 北京绿地广场
+          p  我们的目标 始终如一
+          p.hot.clearfix
+                span.pull-left.mr-40 256人浏览
+                span.pull-left 2017-6-23 
+    nav.pages.text-center(aria-label='Page navigation')
+        ul.pagination
+            li
+                a(href='#', aria-label='Previous')
+                    span(aria-hidden='true') &laquo;
+            li.active
+                a(href='#') 1
+            li
+                a(href='#') 2
+            li
+                a(href='#') 3
+            li
+                a(href='#') 4
+            li
+                a(href='#') 5
+            li
+                a(href='#', aria-label='Next')
+                    span(aria-hidden='true') &raquo;   
+  script.
+    new WOW().init();
+    var swiper = new Swiper('.swiper-container', {
+        autoplay:true,
+        spaceBetween : 45,
+       slidesPerView : 2,
+       centeredSlides : true,
+    });
+
+    
+
+      
+    

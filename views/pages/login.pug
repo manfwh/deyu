@@ -1,0 +1,28 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/hr.css")
+
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+            li
+                a(href="/entityShop") 实体店铺
+            li
+                a(href="/about")  关于我们
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li.active
+                a(href="/oa")  OA办公
+                .selected
+block content
+
+
+      
+    

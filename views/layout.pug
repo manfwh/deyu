@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{title}
+    link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheets/common.css")
+    link(rel="stylesheet", href="/bower_components/animate.css/animate.min.css")
+    block css
+    block scripts
+      script(src="/bower_components/jquery/dist/jquery.min.js")
+      script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+      script(src="/bower_components/wow/dist/wow.min.js")
+  body
+    block nav
+    block content
+    block footer
+      include includes/footer.pug
