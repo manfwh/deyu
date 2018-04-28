@@ -27,6 +27,9 @@
     z-index: -1;
     display: block;
 }
+.prod-tabs .cate-name {
+    padding-top: 20px;
+}
 .prod-tabs .cate span {
     color: #b4bcb9;
 }
@@ -39,6 +42,11 @@
     position: relative;
     border: 2px solid #fff;
     transition: all .2s;
+    text-align: center;
+    transition: all 1s;
+}
+.tab-content .product img {
+    margin-bottom: 30px;
 }
 .product-title {
     text-align: center;
@@ -66,16 +74,16 @@
 /* 公司动态 */
 .news-box {
     position: relative;
-    margin-top: 150px;
+    margin-top: 80px;
 }
 .news-box .left {
     padding: 47px;
     position: relative;
     width: 798px;
     height: 504px;
-    z-index: -2;
+    z-index: 2;
     float: left;
-    background: url('/images/dongtai/1.png');
+    background: url('/images/dongtai/1.jpg');
 }
 .news-box .left .mask {
     position: absolute;
@@ -104,7 +112,7 @@
     left: 675px;
     top: 173px;
     z-index: 11;
-    background: url('/images/sec1.png');
+    background: url('/images/sec3.png');
     box-shadow: 0 0 10px 0 #666;
 }
 .news-box .right {
@@ -140,9 +148,9 @@
     float: right;
 }
 .discount .discount-text {
-    width: 110px;
+    width: 90px;
     height: 80px;
-    padding: 20px 40px 0 20px;
+    padding: 16px 26px 0 20px;
     background: #056c1a;
     opacity: 0.6;
     color: #fff;
@@ -184,10 +192,10 @@
     background: url(/images/median/1.jpg) no-repeat;
 }
 .store-wrap.top2{
-    background: url(/images/median/1.jpg) no-repeat;
+    background: url(/images/median/2.jpg) no-repeat;
 }
 .store-wrap.top3{
-    background: url(/images/median/1.jpg) no-repeat;
+    background: url(/images/median/3.jpg) no-repeat;
 }
 .top2{
     left: 630px;
@@ -211,7 +219,7 @@
     top: 700px;
 }
 .store-name {
-    width: 350px;
+    /* width: 350px;
     height: 122px;
     background: #fff;
     padding-left: 122px;
@@ -219,7 +227,15 @@
     position: absolute;
     padding-top: 24px;
     text-align: right;
-    padding-right: 70px;
+    padding-right: 70px; */
+    height: 122px;
+    background: #fff;
+    padding-left: 100px;
+    font-size: 36px;
+    position: absolute;
+    padding-top: 24px;
+    text-align: right;
+    padding-right: 21px;
 }
 .store-name .address {
     font-size: 14px;
@@ -233,7 +249,7 @@
 }
 .top1 .rank-num {
     top: -50px;
-    left: 70px;
+    left: 20px;
 }
 .top2 .rank-num {
     top: 136px;
@@ -274,7 +290,7 @@
 .cooperation .row img {
     width: 317px;
     height: 90px;
-    border: 8px solid #63a371;
+    box-shadow: 0 0 30px 0 #d7e7dc;
 }
 .cooperation .row p {
     background: #63a371;

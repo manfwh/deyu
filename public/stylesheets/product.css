@@ -4,10 +4,10 @@
 
 
 /* 横幅图片 */
-.barPic {
+/* .barPic {
     width: 100%;
     height: 600px;
-}
+} */
 
 /* 美颜科技 */
 .product-item {
@@ -129,9 +129,7 @@
     z-index: 20;
     display: none;
 }
-.bigImgWrapPlus img {
-  
-}
+
 .bigImgWrap:hover {
     cursor: move;
 }

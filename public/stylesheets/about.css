@@ -61,8 +61,8 @@ h3 span {
     text-align: center;
 }
 .bar-Pic .num {
-    font-size: 48px;
-    
+    font-size: 24px;
+    margin-top: 20px;
 }
 
 /* 团队 */
@@ -72,14 +72,13 @@ h3 span {
 .team-wrap h2 {
     padding-left: 50px;
     font-weight: bold;
+    color: #67a674;
 }
 .team-wrap h2 + p {
     padding-left: 50px;
     color: #666;
 }
-.swiper-container {
- 
-} 
+
 .team-wrap .text {
     font-weight: bold;
     border-bottom: 2px solid #000;
