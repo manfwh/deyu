@@ -10,7 +10,7 @@ block nav
             li
                 a(href="/product") 产品介绍
             li
-                a(href="/entityShop") DUV生活馆
+                a(href="/entityShop") DUY生活馆
             li
                 a(href="/about")  关于我们
             li.active
@@ -68,8 +68,11 @@ block content
                 label(for="remarks") 备注
                 textarea.form-control(rows="6", name="remarks")
             .col-sm-4.col-sm-offset-4
-              .btn-wrap.mt-50
-                button.btn.btn-default.btn-lg.btn-block(type='submit') 提交
+              .btn-wrap
+                button.subButton(type="submit")
+                .btn-text-wrap 登录
+              //- .btn-wrap.mt-50
+              //-   button.btn.btn-default.btn-lg.btn-block(type='submit') 提交
   script.
     
     $(function() {
