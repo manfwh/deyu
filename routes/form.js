@@ -55,4 +55,9 @@ router.post('/login', async (ctx, next) =>{
     }
   }
 })
+// 退出登录
+router.post('/signOut', async (ctx, next) =>{
+  ctx.session.user = null;
+  ctx.status = 204;
+})
 module.exports = router

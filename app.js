@@ -15,7 +15,7 @@ const form = require('./routes/form')
 app.keys = ['deyu', 'yidou', 'pc'];
 const seccionConfig = {
   key: 'deyu',
-  maxAge: 86400000,
+  maxAge: 60000,
 }
 app.use(session(seccionConfig, app))
 // error handler
