@@ -31,7 +31,7 @@ router.post('/join', function (ctx, next) {
       "date": "${date}"
     },
   `
-  fs.appendFile(`./data/join/${filename}`, data, 'utf8', err =>{
+  fs.appendFile(`./uploads/join/${filename}`, data, 'utf8', err =>{
     if(err) throw err;
   })
   // fs.appendFile(`./data/join/${filename2}`, data2, 'utf8', err =>{
