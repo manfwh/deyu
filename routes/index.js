@@ -54,8 +54,10 @@ router.get('/about', async (ctx, next) => {
 })
 // 诚聘英才
 router.get('/hr', async (ctx) => {
+  const jobs = require('../data/jobs');
   await ctx.render('pages/hr', {
-    title: TITLE
+    title: TITLE,
+    jobs
   })
 })
 // 合作招募
@@ -95,14 +97,25 @@ router.get('/login', async (ctx) => {
 })
 // 动态详情
 router.get('/news/:id', async (ctx, next) =>{
-  try {
-   const article = require(`../data/${ctx.params.id}.json`);
-   await ctx.render('pages/news', {
-     title: TITLE,
-     article
-   })
-  } catch (error) {
-    next(error)
+  // try {
+  // //  const article = require(`../data/${ctx.params.id}.json`);
+  //  await ctx.render('pages/news', {
+  //    title: TITLE,
+  //  })
+  // } catch (error) {
+  //   next(error)
+  // }
+  const id = ctx.params.id;
+  console.log(id)
+  switch (id) {
+    case "1": 
+      await ctx.render('pages/news', {title: TITLE});
+      break;
+    case "2": 
+      await ctx.render('pages/news2', {title: TITLE});
+      break;
+    case "3": 
+      await ctx.render('pages/news3', {title: TITLE});
   }
 })
 router.get('/string', async (ctx, next) => {

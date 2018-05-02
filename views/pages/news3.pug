@@ -1,0 +1,88 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/entityShop.css")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+                
+            li
+                a(href="/entityShop") DUY生活馆
+                
+            li.active
+                a(href="/about")  关于我们
+                .selected
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  .container
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+          a(href="/") 首页 
+        li.active  最新动态
+    section.plr-80
+      article.mt-50 
+        h1  妈，我想给您画个妆……
+        .mt-50.text-muted
+            span.glyphicon.glyphicon-time(aria-hidden='true')
+            |  2018-04-21
+            span(style="margin: 0 20px")
+            span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+            |  399
+        //-.line
+        p.mt-50
+          strong 风日，有人提醒加衣；雨天，有人撑伞相迎。冷暖岁月，懂得珍惜的情感，一直相伴左右，一颗心，从未迷失。只想要一种简单而温馨的日子。
+      
+        
+        .main.mt-50
+          img.img-responsive.center-block(src="/images/article/3/1.png", alt="")
+          //-img.img-responsive(src="/images/360.jpg", alt="")
+          //- .row.mt-50
+          //-   .col-xs-4
+          //-     img.img-responsive(src="/images/article.jpg", alt="")
+          //-   .col-xs-4
+          //-     img.img-responsive(src="/images/article.jpg", alt="")
+          //-   .col-xs-4
+          //-     img.img-responsive(src="/images/article.jpg", alt="")
+        
+          p.text-muted  "百善孝为先”，孝敬父母是我们美好品德中最为重要和占第一位的品德。这也是我们做儿女天经地义的事情。我们中华民族几千年来就一直具有的优良传统。但在不一样的时代,演绎着相同的主题,那就是孝敬父母,回报父母。 
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/3/2.png", alt="")
+          p
+            strong 孔子言：“父母之年，不可不知也。一则以喜，一则以惧。”
+          p.text-muted 记得小时候，穿着妈妈亲手织的毛衣，整个冬天都很温暖，牵着妈妈的手，我就只管去发现这个充满诱惑的世界。
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/3/3.png", alt="")
+          p.text-muted 现在的我，生活越来越丰富，交际的圈子越来越大，今天要跟工作上的伙伴谈事情，明天约了三五好友小聚，后天......每天都安排得满满的。当我们许久未曾回家，看到母亲逐渐变多的皱纹发时，突然觉得，在人生阶段的这些时刻，世界似乎突然就开始加速，不知道从何时起母亲美丽的容颜逐渐褪去…
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/3/4.png", alt="")
+          p.text-muted 曾经的我，曾暗暗许下承诺，要为母亲做一些事情：
+          p.text-muted 曾打算用自己最好的厨艺给母亲做一顿晚餐……
+          p.text-muted 曾想翻开手机存有母亲最美的画面……
+          p.text-muted 曾想着给妈妈做个美美的造型……
+          p.text-danger 我做到了吗？
+          p.text-muted 曾经“现场化妆让父母变老二十岁！”的视频让我不禁泪流满面……
+          p 看完视频，我打开了我的化妆包，看着自己满满的化妆工具和彩妆用品……
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/3/5.png", alt="")
+          p
+            strong 我沉默不语，只想说：“妈，我想给您画个妆”。
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/3/6.png", alt="")
+          p “DUY生活体验馆”以“共享”“科技”“定制”为核心的理念，推出“3+N”“养护彩妆”“定制护肤”服务，为每位爱美女性打造美丽、健康容颜。
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/3/7.png", alt="")
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/1/2.png", alt="")
+          

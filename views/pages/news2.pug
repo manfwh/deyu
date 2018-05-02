@@ -1,0 +1,87 @@
+extends ../layout
+block css
+  link(rel="stylesheet", href="/stylesheets/entityShop.css")
+block nav
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 产品介绍
+                
+            li
+                a(href="/entityShop") DUY生活馆
+                
+            li.active
+                a(href="/about")  关于我们
+                .selected
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  img.barPic(src="/images/bar-pic.jpg", alt="")
+  .container
+    //- 导航 搜索框
+    .topBar.clearfix
+      ol._breadcrumb.pull-left
+        li
+          a(href="/") 首页 
+        li.active  最新动态
+    section.plr-80
+      article.mt-50 
+        h1  爸妈，今年的我不再是独自前行
+        .mt-50.text-muted
+            span.glyphicon.glyphicon-time(aria-hidden='true')
+            |  2018-04-23
+            span(style="margin: 0 20px")
+            span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+            |  256
+        .line
+        p.mt-50 时间总是在不知不觉中改变我们的生活轨迹，而我们对这种改变毫无察觉。
+        p 自毕业以来，似乎毕业的年纪也代表了结婚的时节。每日的“催婚令”或隐性而来，或醒目展示~~~他们经常说我太挑剔，说我年纪不小了，要早点成个家。其实我知道父母逼我结婚，唯一就是希望我过得很好。但是，越长越大，却发现自己越是孤独。
+        
+        //-p.text-muted  ·······························································
+        
+        .main.mt-50
+          img.img-responsive.center-block(src="/images/article/2/1.png", alt="")
+    
+          p.text-muted 安静时，我在想，我已经不像在学校里了，上课有人与我一起奔跑去课堂，下课一起去食堂；工作时，上班无趣，感情飘忽不定、未来的规划不知如何确定，让我不得不一个人去面对。情感的倾诉偶尔和父母聊聊，工作的事情则更多的却是报喜不报忧。更多的时间里“享受着”电影里“一个人一座城”的电影桥段。
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/2.png", alt="")
+          p.text-muted 我想，从此我不再是一个人，从此心里想的念得总是 “我们”。毕竟一个人是孤独的，空有一腔孤勇的人注定不能飞得高，走得远。
+          p.text-muted 但是，一切的来临都是突然而幸福的……
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/11.png", alt="")
+          p.text-muted 从今天开始，我不再是一个人。
+          p.text-muted 每个人都渴望关注，渴望温暖，渴望力量。当他们来临的时候，忽然觉得岁月匆匆，忽然的忽然心头就涌上一种说不出的感觉。这也给我们增加了一份责任，增加了一份爱。回首当初，至今相识已经许久，没有兴奋，唯有感叹，时光速速……
+           
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/3.png", alt="")
+          p.text-muted 从那天开始，有一种东西在我们之间慢慢环绕；
+          p.text-muted 从此，我们需要更加耐心细心苦心的经营；
+          p.text-muted 从此，我们就需要学会彼此兼顾双方；
+          p.text-muted 从此，我们肩膀背的就是一家人……
+          p.text-muted 你给我温暖的空间和关心，在这里我收获到了未曾有过的温暖和关怀。每日早上温热而营养的早餐，每周欢快而舒畅的娱乐，每次无微不至的关怀……我记得罗曼·罗兰说过：“我看透了这个世界，但我仍然热爱它。”我内心的告白也像这样心无所惧。
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/4.png", alt="")
+          p.text-muted 我喜欢这样的味道……
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/5.png", alt="")
+          p.text-muted 我喜欢这样的氛围……
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/6.png", alt="")
+          p.text-muted 我喜欢与这样的人在一起……
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/7.png", alt="")
+          p.text-muted 我喜欢在这样的人生规划中前行……
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/8.png", alt="")
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/9.png", alt="")
+          p.text-muted 我们是一个团结友爱、有凝聚力、互相信任、互相帮助的团队，伙伴单纯、美好、真诚、朴实。我想，只有当一个人、一个团队、一个企业将大的情怀、大的信仰作为自己行动指南时，我们才能心无所惧，执着前行！加入我们，德宇创星这里才是实现梦想的地方。自信和开心的告诉我们的父母：“爸妈，我不再是一个人独自前行！”
+          .mt-50
+            img.img-responsive.center-block(src="/images/article/2/10.png", alt="")

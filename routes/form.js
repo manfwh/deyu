@@ -43,14 +43,14 @@ router.post('/join', function (ctx, next) {
 router.post('/login', async (ctx, next) =>{
   console.log(ctx.request.body)
   await next()
-  const { account, password } = ctx.request.body;
-  if(account == 'admin' && password == 'admin') {
+  const { account } = ctx.request.body;
+  if(account == 'admin' ) {
     ctx.session.user = 'admin';
     ctx.redirect('/oa');
   } else {
     ctx.body = {
       code: 40001,
-      message: '账号和密码错误'
+      message: '账号有误'
     }
   }
 })

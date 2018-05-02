@@ -1,7 +1,7 @@
-.title {
+.tit {
     color: #50985f;
 }
-.title .small{
+.tit .small{
     margin-top: 20px;
     font-size: 50%;
 }
@@ -9,9 +9,8 @@
     margin: 0;
 }
 
-h2 {
+.job-title {
     font-size: 48px;
-    margin-top: 60px;
     
 }
 .job {
