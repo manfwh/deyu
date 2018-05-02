@@ -11,14 +11,14 @@ router.post('/join', function (ctx, next) {
   const filename = `${date.getFullYear()}-${date.getMonth() + 1}.txt`;
   //const filename2 = `${date.getFullYear()}-${date.getMonth() + 1}.json`;
   const data = `
-   **************************************
-   姓名： ${name}
-   手机号: ${phone}
-   邮箱: ${email}
-   城市: ${city}
-   备注： ${remarks}
-   提交时间： ${date.getDate()} 日 ${date.getHours()} : ${date.getMinutes()} 
-   ***************************************
+   **************************************\r\n
+   姓名： ${name}\r\n
+   手机号: ${phone}\r\n
+   邮箱: ${email}\r\n
+   城市: ${city}\r\n
+   备注： ${remarks}\r\n
+   提交时间： ${date.getDate()} 日 ${date.getHours()} : ${date.getMinutes()} \r\n
+   ***************************************\r\n
   `
   const data2 = `
     {

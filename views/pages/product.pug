@@ -12,7 +12,7 @@ block nav
                 a(href="/product") 产品介绍
                 .selected
             li
-                a(href="/entityShop") DIV生活馆
+                a(href="/entityShop") DUV生活馆
             li
                 a(href="/about")  关于我们
             li
@@ -22,7 +22,7 @@ block nav
             li
                 a(href="/oa")  OA办公
 block content
-  img.barPic(src="/images/bar-pic.jpg", alt="")
+  img.barPic(src="/images/pageBanner/product.jpg", alt="")
   .container
     //- 导航 搜索框
     .topBar
@@ -59,55 +59,55 @@ block content
         .row
           .col-lg-4
             .img-box-lg
-              img(src="/images/newProduct/1.jpg", alt="") 
+              img(src="/images/newProduct/big1.jpg", alt="") 
               .des
                 .pull-left
                   .product-name 深层滋养新技术
                   .product-des 来自美国最新萃取技术
-                .pull-right
+                //-pull-right
                   .old-price.text-right 原价 ￥2999.00
                   .new-price ￥1999.00 
           .col-lg-8
             .row
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/1-1.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/1-2.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
             .row(style="margin-top: 26px")
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/1-3.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/1-4.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
         .row(style="margin-top:26px")
@@ -115,28 +115,28 @@ block content
             .row
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/2-1.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/2-2.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
             .row(style="margin-top: 26px")
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/2-3.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
@@ -146,22 +146,22 @@ block content
                             .new-price ￥1999.00 
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/2-4.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
           .col-lg-4
             .img-box-lg
-                img(src="/images/newProduct/1.jpg", alt="") 
+                img(src="/images/newProduct/big2.jpg", alt="") 
                 .des
                     .pull-left
                         .product-name 深层滋养新技术
                         .product-des 来自美国最新萃取技术
-                    .pull-right
+                    //-.pull-right
                         .old-price.text-right 原价 ￥2999.00
                         .new-price ￥1999.00 
         nav.pages(aria-label='Page navigation')
@@ -175,41 +175,42 @@ block content
                     a(href='#', aria-label='Next')
                         span(aria-hidden='true') &raquo;
             
-  img.barPic(src="/images/productAd.jpg", alt="")         
-  .container   
+  img.barPic(src="/images/pageBanner/keji.jpg", alt="")         
+  .container  
+    //- 美颜科技 
     .block.mt-150 
       .header
         .title 
           | MEIYANKEJI
           .title-text 美颜科技 
-      .block-content.row.pad100
+      .block-content.row
         .row(style="margin-top:26px")
           .col-lg-8
             .row
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/001.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/002.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
             .row(style="margin-top: 26px")
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/003.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
@@ -219,22 +220,76 @@ block content
                             .new-price ￥1999.00 
               .col-md-6
                 .img-box-md
-                    img(src="/images/newProduct/2.jpg", alt="")
+                    img(src="/images/newProduct/004.jpg", alt="")
                     .des
                         .pull-left
                             .product-name 深层滋养新技术
                             .product-des 来自美国最新萃取技术
-                        .pull-right
+                        //-.pull-right
                             .old-price.text-right 原价 ￥2999.00
                             .new-price ￥1999.00 
           .col-lg-4
             .img-box-lg
-                img(src="/images/newProduct/1.jpg", alt="") 
+                img(src="/images/newProduct/005.jpg", alt="") 
                 .des
                     .pull-left
                         .product-name 深层滋养新技术
                         .product-des 来自美国最新萃取技术
-                    .pull-right
+                    //-.pull-right
+                        .old-price.text-right 原价 ￥2999.00
+                        .new-price ￥1999.00 
+        //- .row(style="margin-top:26px")
+        //-   .col-lg-8
+        //-     .row
+        //-       .col-md-6
+        //-         .img-box-md
+        //-             img(src="/images/newProduct/005.jpg", alt="")
+        //-             .des
+        //-                 .pull-left
+        //-                     .product-name 深层滋养新技术
+        //-                     .product-des 来自美国最新萃取技术
+        //-                 //-.pull-right
+        //-                     .old-price.text-right 原价 ￥2999.00
+        //-                     .new-price ￥1999.00 
+        //-       .col-md-6
+        //-         .img-box-md
+        //-             img(src="/images/newProduct/001.jpg", alt="")
+        //-             .des
+        //-                 .pull-left
+        //-                     .product-name 深层滋养新技术
+        //-                     .product-des 来自美国最新萃取技术
+        //-                 //-.pull-right
+        //-                     .old-price.text-right 原价 ￥2999.00
+        //-                     .new-price ￥1999.00 
+        //-     .row(style="margin-top: 26px")
+        //-       .col-md-6
+        //-         .img-box-md
+        //-             img(src="/images/newProduct/002.jpg", alt="")
+        //-             .des
+        //-                 .pull-left
+        //-                     .product-name 深层滋养新技术
+        //-                     .product-des 来自美国最新萃取技术
+        //-                 //-.pull-right
+        //-                     .old-price.text-right 原价 ￥2999.00
+        //-                     .new-price ￥1999.00 
+        //-       .col-md-6
+        //-         .img-box-md
+        //-             img(src="/images/newProduct/003.jpg", alt="")
+        //-             .des
+        //-                 .pull-left
+        //-                     .product-name 深层滋养新技术
+        //-                     .product-des 来自美国最新萃取技术
+        //-                 //-.pull-right
+        //-                     .old-price.text-right 原价 ￥2999.00
+        //-                     .new-price ￥1999.00 
+        //-   .col-lg-4
+        //-     .img-box-lg
+        //-         img(src="/images/newProduct/004.jpg", alt="") 
+        //-         .des
+        //-             .pull-left
+        //-                 .product-name 深层滋养新技术
+        //-                 .product-des 来自美国最新萃取技术
+                    //-.pull-right
                         .old-price.text-right 原价 ￥2999.00
                         .new-price ￥1999.00 
 

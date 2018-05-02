@@ -12,7 +12,7 @@ block nav
             li
                 a(href="/product") 产品介绍   
             li
-                a(href="/entityShop") DIV生活馆
+                a(href="/entityShop") DUV生活馆
             li
                 a(href="/about")  关于我们
             li
@@ -27,13 +27,25 @@ block content
     ol.carousel-indicators
       li.active(data-target='#banner', data-slide-to='0')
       li(data-target='#banner', data-slide-to='1')
+      li(data-target='#banner', data-slide-to='2')
+      li(data-target='#banner', data-slide-to='3')
+      li(data-target='#banner', data-slide-to='4')
     // Wrapper for slides
     .carousel-inner(role='listbox')
       .item.active
-        img(src='/images/banner1.jpg', alt='...')
+        img(src='/images/banner/1.jpg', alt='...')
         .carousel-caption
       .item
-        img(src='/images/banner2.jpg', alt='...')
+        img(src='/images/banner/2.jpg', alt='...')
+        .carousel-caption
+      .item
+        img(src='/images/banner/3.jpg', alt='...')
+        .carousel-caption
+      .item
+        img(src='/images/banner/5.jpg', alt='...')
+        .carousel-caption
+      .item
+        img(src='/images/banner/4.jpg', alt='...')
         .carousel-caption
     // Controls
     a.left.carousel-control(href='#banner', role='button', data-slide='prev')
@@ -50,96 +62,49 @@ block content
           | CHANPINZHANSHI
           .title-text 产品展示    
         ul.row.prod-tabs
-          li.col-md-2(role='presentation')
-          li.col-md-2.active.cate(role='presentation',)
-            a(href="#tab1",  data-toggle="tab").cate-name
-              | 护肤
-              br
-              span Skin care
-            img(src="/images/cateBg.png", alt="")
-            
-          li.col-md-2.cate(role='presentation')
-            a(href="#tab2",  data-toggle="tab").cate-name 
-                | 彩妆
-                br
-                span Skin care
-            img(src="/images/cateBg.png", alt="")
-          li.col-md-2.cate(role='presentation', data-toggle="tab")
-            a(href="#tab3").cate-name 
-                | 日化
-                br
-                span Skin care
-            img(src="/images/cateBg.png", alt="")
-          li.col-md-2.cate(role='presentation', data-toggle="tab")
-            a(href="#tab4").cate-name 
-                | 美颜科技
-                br
-                span Skin care
-            img(src="/images/cateBg.png", alt="")
-          li.col-md-2.active(role='presentation')
+          li.col-lg-2.col-xs-3.hidden-xs(role='presentation')
+          each cate, index in data
+            if index == 0
+              li.col-lg-2.col-xs-3.active.cate(role='presentation')
+                a(href="#tab" + Number(index+1),  data-toggle="tab").cate-name
+                  | #{cate.title}
+                  br
+                  span.hidden-xs #{cate.subTitle}
+                img(src="/images/cateBg.png", alt="")
+            else
+              li.col-lg-2.col-xs-3.cate(role='presentation')
+                a(href="#tab" + Number(index+1),  data-toggle="tab").cate-name
+                  | #{cate.title}
+                  br
+                  span.hidden-xs #{cate.subTitle}
+                img(src="/images/cateBg.png", alt="")
+        
+          li.col-lg-2.col-xs-3.active.hidden-xs(role='presentation')
         .tab-content
-          #tab1.tab-pane.fade.in.active.row
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/1/1.png", alt="")
-              .product-title  护肤
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/1/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/1/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/1/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/1/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/1/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-          #tab2.tab-pane.fade.in.row
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/2/1.png", alt="")
-              .product-title  护肤
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/2/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/2/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/2/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/2/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
-            a.col-md-2.product(href="#")
-              img(src="/images/cate/2/1.png", alt="")
-              .product-title  精华系列
-              .line
-              .product-title  ESSENC
+          each list, index in data
+            if(index == 0)
+              div(id="tab" + Number(index+1)).tab-pane.fade.in.active.row
+                each item in list.list
+                  .col-lg-2.col-xs-6.col-md-4.product
+                    div
+                      img.img-responsive.center-block(src="/images/productShow" + item.img, alt= item.productName)
+                      .product-title.text-hidden(data-toggle="tooltip", data-placement="top", title=item.productName)  #{item.productName}
+                      .line
+                      .product-title  #{item.branchName}
+            else 
+              div(id="tab" + Number(index+1)).tab-pane.fade.in.row
+                each item in list.list
+                  .col-lg-2.col-xs-6.col-md-4.product
+                    div
+                      img.img-responsive.center-block(src="/images/productShow" + item.img, alt= item.productName)
+                      .product-title.text-hidden(data-toggle="tooltip", data-placement="top", title=item.productName)  #{item.productName}
+                      .line
+                      .product-title  #{item.branchName}
+            //- a.col-md-2.product(href="#")
+            //-   img(src="/images/cate/2/1.png", alt="")
+            //-   .product-title  精华系列
+            //-   .line
+            //-   .product-title  ESSENC
     // 公司动态
     .block
       .header
@@ -149,45 +114,44 @@ block content
       .block-content
         .news-box.clearfix
           .sec2
-          .pic-wrap          
-          .left
+          .pic-wrap.wow.bounceInRight(data-wow-delay="0.5s")  
+          a(href="/news/1").left
             .mask
             .inner-box.wow.bounceInUp
-              | 纳米无硅油产品发布会
+              | 德宇创星▪DUY生活馆
               br
-              | Chamomile series
+              | 我们不一样
           .right
-            .tit 无硅油滋养新技术
-            .des 
-              | 来自美国最新萃取技术
-              br
-              | 100层深度萃取
+            .tit.wow.bounceInRight(data-wow-delay="1s") 与你曾经的所知、
+            .des.wow.bounceInRight(data-wow-delay="1.4s") 
+              | 所识，我们不一样
+            
             .discount.clearfix
-              .discount-text 新品折扣
-              .discount-num.wow.bounceInLeft(data-wow-delay="0.2s") -20%
+              .discount-text 德宇创星
+              //- .discount-num.wow.bounceInLeft(data-wow-delay="0.2s") -20%
             .more MORE
        
         .more-btn
           | 更多动态
           br
-          | GENGDUODONGTAI
+          | MORE DYNAMIC
     #rank
       .store-wrap.top1    
         img.rank-num.wow.bounceInLeft(src="/images/top1.png", alt="") 
-        .store-name
-          | 茂业天地
-          .address  茂业天地 二期 三层
+        .store-name.wow.bounceInLeft(data-wow-delay="0.4s")
+          | DUY生活体验馆
+          //- .address  茂业天地 二期 三层
       img.display(src="/images/top3.jpg", alt="")
       .store-wrap.top2   
         img.rank-num.wow.bounceInRight(src="/images/top2.png", alt="")
-        .store-name
-          | 茂业天地
-          .address  茂业天地 二期 三层
+        .store-name.wow.bounceInRight(data-wow-delay="0.4s")
+          | DUY生活体验馆
+          //-.address  茂业天地 二期 三层
       .store-wrap.top3  
         img.rank-num.wow.bounceInLeft(src="/images/top3.png", alt="") 
-        .store-name
-          | 茂业天地
-          .address  茂业天地 二期 三层
+        .store-name.wow.bounceInLeft(data-wow-delay="0.4s")
+          | DUY生活体验馆
+          //-.address  茂业天地 二期 三层
           
       .leaf-box
         img(src="/images/rank-sec1.png", alt="")
@@ -200,28 +164,24 @@ block content
           .title-text 合作品牌    
       .block-content
         .row
-          .col-lg-4
-            img(src="/images/hezuo/logo1.jpg", alt="")
-          .col-lg-4
-            img(src="/images/hezuo/logo1.jpg", alt="")
-          .col-lg-4
-            img(src="/images/hezuo/logo1.jpg", alt="")
-          .col-lg-4
-            img(src="/images/hezuo/logo1.jpg", alt="")
-          .col-lg-4
-            img(src="/images/hezuo/logo1.jpg", alt="")
-          .col-lg-4
-            img(src="/images/hezuo/logo1.jpg", alt="")
+          each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            .col-lg-4
+              img(src="/images/hezuo/" + val + ".jpg", alt="")
+          
     .about
       .about-text
         img(src="/images/aboutTitle.jpg", alt="")  
-        p 百雀羚创立于1931年，是国内屈指可数的历史悠久的著名化妆品厂商。悠久的历史，承载着光辉的业绩，成就了百雀羚品质如金的美誉。品牌曾被多次评选为“上海著名商标”，并荣获“中国驰名商标”等称号。公司先后与美国Disne
-        p 日本ASTRO BOY等国际公司合作，推出了迪士尼、阿童木等儿童护理产品系列。传承经典，勇于创新，公司致力于为消费者创造天然温和的优质护肤品，完美演绎“中国传奇，东方之美”。 
+        p 德宇创星▪DUY生活体验馆，是以“生活、服务、共享、科技、财富”为理念的高端服务品牌。DUY打破传统竞争瓶颈，致力于在全国范围内设立“千城万店”的全民高端生活体验馆，打造中国第一家共享服务式平台。
+        p DUY以“3+N”“养护彩妆”为核心；以“共享”“科技”“个性化定制”为服务理念。同时，DUY为会员打造出“尊享”“分红”“增值”的机制。DUY致力于为消费者创造自然舒适的优质服务，完美演绎“科技亮肤，柔性之美” 
       .about-pic.pull-right
         img.prd-gb(src="/images/about-pic.jpg", alt="")
         img.about-prd-pic(src="/images/about-prd.png", alt="")
   script.
-    new WOW().init();
+    $(function() {
+      new WOW().init();
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    
   
   
             

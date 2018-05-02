@@ -1,0 +1,146 @@
+[
+    {
+        "title": "时尚彩妆",
+        "subTitle": "Fashion Make-up",
+        "list": [
+            {
+                "productName": "丝绒唇釉雾",
+                "branchName": "香奈儿Chanel",
+                "img": "/caizhuang/1.jpg"
+            },
+            {
+                "productName": "邂逅柔情清新活力淡香水",
+                "branchName": "香奈儿Chanel",
+                "img": "/caizhuang/2.jpg"
+            },
+            {
+                "productName": "全新烈艳蓝金唇膏",
+                "branchName": "迪奥Dior",
+                "img": "/caizhuang/3.jpg"
+            },
+            {
+                "productName": "持妆气垫BB",
+                "branchName": "雅诗兰黛Estee Lauder",
+                "img": "/caizhuang/4.jpg"
+            },
+            {
+                "productName": "花漾魅型五色眼影盘",
+                "branchName": "雅诗兰黛Estee Lauder",
+                "img": "/caizhuang/5.jpg"
+            },
+            {
+                "productName": "大牌眼线笔",
+                "branchName": "雅诗兰黛Estee Lauder",
+                "img": "/caizhuang/6.jpg"
+            }
+        ]
+    },
+    {
+        "title": "名品护肤",
+        "subTitle": "Famous Skin-care",
+        "list": [
+            {
+                "productName": "72H保湿套装",
+                "branchName": "Clinique倩碧",
+                "img": "/hufu/1.jpg"
+            },
+            {
+                "productName": "密集修护肌透面膜",
+                "branchName": "雅诗兰黛Estee Lauder",
+                "img": "/hufu/5.jpg"
+            },
+            {
+                "productName": "特润修护肌透精华露",
+                "branchName": "雅诗兰黛Estee Lauder",
+                "img": "/hufu/3.jpg"
+            },
+            {
+                "productName": "晶透沁白套装",
+                "branchName": "雅诗兰黛Estee Lauder",
+                "img": "/hufu/6.jpg"
+            },
+            {
+                "productName": "多效智妍精华霜",
+                "branchName": "雅诗兰黛Estee Lauder",
+                "img": "/hufu/4.jpg"
+            },
+            {
+                "productName": "黄油无油补水保湿清爽型乳液",
+                "branchName": "Clinique倩碧",
+                "img": "/hufu/2.jpg"
+            }
+        ]
+    },
+    {
+        "title": "香氛洗护",
+        "subTitle": "Scent Toiletries",
+        "list": [
+            {
+                "productName": "男士去屑洗发水",
+                "branchName": "宝洁",
+                "img": "/rihua/5.jpg"
+            },
+            {
+                "productName": "婴儿洗衣液",
+                "branchName": "蓝月亮",
+                "img": "/rihua/6.jpg"
+            },
+            {
+                "productName": "卫生纸相印家用",
+                "branchName": "相印",
+                "img": "/rihua/1.jpg"
+            },
+            {
+                "productName": "清厨房大桶洗碗果蔬清洗洁精",
+                "branchName": "蓝月亮",
+                "img": "/rihua/2.jpg"
+            },
+            {
+                "productName": "3D钻亮炫白热感美白进口牙膏",
+                "branchName": "佳洁士",
+                "img": "/rihua/3.jpg"
+            },
+            {
+                "productName": "家庭装洗澡持久留香肥皂",
+                "branchName": "舒肤佳",
+                "img": "/rihua/4.jpg"
+            }
+        ]
+    },
+    {
+        "title": "美颜科技",
+        "subTitle": "Beauty  Sience",
+        "list": [
+            {
+                "productName": "立式超频精雕仪",
+                "branchName": "DUY",
+                "img": "/keji/1.jpg"
+            },
+            {
+                "productName": "LED光谱仪红蓝光祛痘仪光子嫩肤仪",
+                "branchName": "DUY",
+                "img": "/keji/2.jpg"
+            },
+            {
+                "productName": "OPT脱毛仪冰点无痛脱毛激光祛斑嫩肤黑脸娃娃美容院仪器",
+                "branchName": "DUY",
+                "img": "/keji/3.jpg"
+            },
+            {
+                "productName": "立式毛发分析系统触摸式一体机",
+                "branchName": "DUY",
+                "img": "/keji/4.jpg"
+            },
+            {
+                "productName": "魔镜皮肤检测试脸面部肌肤智能分析水油分荧光CT机",
+                "branchName": "DUY",
+                "img": "/keji/5.jpg"
+            },
+            {
+                "productName": "皮肤管理AQUASKIN三代黑色综合仪注氧冷温仪",
+                "branchName": "DUY",
+                "img": "/keji/6.jpg"
+            }
+        ]
+    }
+]

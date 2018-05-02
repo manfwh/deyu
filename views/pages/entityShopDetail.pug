@@ -10,11 +10,11 @@ block nav
             li
                 a(href="/product") 产品介绍
                 
-            li.active
-                a(href="/entityShop") DIV生活馆
-                .selected
             li
+                a(href="/entityShop") DUV生活馆
+            li.active
                 a(href="/about")  关于我们
+                 .selected
             li
                 a(href="/join")  合作招募
             li
@@ -30,11 +30,11 @@ block content
         li
           a(href="/") 首页 
         li
-          a(href="/entityShop")  DIV生活馆
-        li.active  店铺详情
+          a(href="/entityShop")  关于我们
+        li.active  动态详情
     section
       article.mt-50 
-        h1  亲贤街茂业天地店
+        h1  #{article.title}
         .line
         p.text-muted 中弘大厦是一座标志性地标建筑坐落于
         p.text-muted 北京海淀区，项目与CCTV大楼、华贸等地标建筑遥相呼应，构成吸金纳财的财富金三角，丰富了CBD天际线

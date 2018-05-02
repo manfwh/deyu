@@ -16,8 +16,10 @@ const OA_CATE = {
 }
 // 首页
 router.get('/', async (ctx, next) => {
+  const data = require('../data/productsShow')
   await ctx.render('pages/index', {
-    title: TITLE
+    title: TITLE,
+    data
   })
 })
 // 产品介绍

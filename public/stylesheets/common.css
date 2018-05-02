@@ -5,6 +5,9 @@
 .plr-40 {
     padding: 0 40px;
 }
+.plr-80 {
+    padding: 0 80px;
+}
 .mr-40 {
     margin-right: 40px;
 }
@@ -34,6 +37,9 @@ ol {
 .footer {
     margin: 0;
 }
+.carousel-control.left, .carousel-control.right {
+    background: none;
+}
 /************************************ 公共类************************************/
 
 /* 品牌介绍 */
@@ -55,9 +61,18 @@ ol {
     left: 100px;
     top: -210px;
 }
+/* 文章详情 */
+article {
+    padding-bottom: 50px;
+}
+article p{
+    line-height: 2.5;
+    font-size: 16px;
+    text-indent: 2em;
+}
 /*  block */
 .block {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 .block .title {
     font-size: 86px;
@@ -121,9 +136,9 @@ p.hot span::before {
     position: relative;
     overflow: hidden;
 }
-.img-box-lg:hover .des, .img-box-md:hover .des {
+/* .img-box-lg:hover .des, .img-box-md:hover .des {
     bottom: 0;
-}
+} */
 .img-box-lg .des {
     height: 75px;    
     bottom: -75px;
@@ -139,6 +154,7 @@ p.hot span::before {
     position: absolute;
     background: #50985f;
     left: 0;
+
     transition: bottom .2s;
 }
 .des .product-name {
@@ -349,9 +365,7 @@ ul {
     color: #8c8c8c;
     font-size: 18px;
 }
-.nav-top .navbar-nav>li>a:after {
 
-}
 .nav-top .navbar-text {
     font-size: 24px;
     color: #404040;
