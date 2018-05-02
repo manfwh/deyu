@@ -11,7 +11,7 @@ block nav
             li
                 a(href="/product") 产品介绍
             li
-                a(href="/entityShop") DUV生活馆
+                a(href="/entityShop") DUY生活馆
             li
                 a(href="/about")  关于我们
             li
@@ -22,7 +22,7 @@ block nav
             li
                 a(href="/oa")  OA办公
 block content
-  img.barPic(src="/images/bar-pic.jpg", alt="")
+  img.barPic(src="/images/pageBanner/job.jpg", alt="")
     //- 导航 搜索框
   .container.shadow
     .topBar.clearfix
@@ -47,44 +47,48 @@ block content
       //-   .search-wrap
       //-     button.btn.btn-default
       //-       span.glyphicon.glyphicon-search
-    h1.title.mt-50
+    h1.tit.mt-50
       | 热招工作岗位    
       .small COMFORTABLE  ENVIRONMENT  
-    .row.mt-50
-      .col-lg-6
-        img(src="/images/job.jpg", alt="").img-responsive
-      .col-lg-6.job
-        h2.wow.bounceInUp  web前端开发工程师
-        .row.mt-50.wow.bounceInRight(data-wow-delay="0.5s")
-          .col-xs-4  工作地点: 太原
-          .col-xs-4  工资待遇: 面议
-          .col-xs-4  发布日期: 2018-4-26
-          .col-xs-4  需求人数: 8
-          .col-xs-4  有效期限: 长期
-        dl.wow.bounceInRight(data-wow-delay="1s")
-          dt 岗位描述: 
-          dd 负责主站的开发维护，参与部分专题页的页面制作；负责移动M站的开发与维护，参与M站专题制作；负责部分后台管理页面的制作。
-          dt 基本要求: 
-          dd 精通JavaScript，html，css，理解原型链，精通CSS语义化；能够很好的解决浏览器兼容和跨平台兼容；熟悉各种前端工具,UI框架,jquery,bootstrap,react；
-        a(href="").btn.btn-danger  申请职位
-    
-    .row.mt-50
-      .col-lg-6.job
-        h2.wow.bounceInUp  ui设计师
-        .row.mt-50.wow.bounceInRight(data-wow-delay="0.5s")
-          .col-xs-4  工作地点: 太原
-          .col-xs-4  工资待遇: 面议
-          .col-xs-4  发布日期: 2018-4-26
-          .col-xs-4  需求人数: 8
-          .col-xs-4  有效期限: 长期
-        dl.wow.bounceInRight(data-wow-delay="1s")
-          dt 岗位描述: 
-          dd 结合业务需求完成页面的交互原型设计、视觉界面设计；
-          dt 基本要求: 
-          dd 精通photoshop、Coredraw、AI等设计软件，对flash、前端HTML/CSS有一定的了解;
-        a(href="").btn.btn-danger  申请职位
-      .col-lg-6
-        img(src="/images/job.jpg", alt="").img-responsive
+    each job, index in jobs
+      .row.mt-50
+        if index%2 == 0
+          .col-lg-6
+            img(src="/images/job/"+ job.img, alt="").img-responsive
+          .col-lg-6.job
+            h2.job-title.wow.bounceInUp  #{job.title}
+            .row.mt-50.wow.bounceInRight
+              .col-xs-4  工作地点: #{job.workplace}
+              .col-xs-4  职位月薪: #{job.salary}
+              .col-xs-4  发布日期: #{job.release}
+              .col-xs-4  工作性质: #{job.nature}
+              .col-xs-4  工作年限: #{job.service}
+              .col-xs-4  最低学历: #{job.education}
+            dl.wow.bounceInRight(data-wow-delay="0.5s")
+              dt 职位描述: 
+              dd #{job.description.join(" ")}
+              dt 任职要求: 
+              dd #{job.requirement.join(" ")}
+            a(href="http://company.zhaopin.com/CZ681240130.htm", target="_blank").btn.btn-danger  申请职位
+        else
+          .row.mt-50
+            .col-lg-6.job
+              h2.job-title.wow.bounceInUp  #{job.title}
+              .row.mt-50.wow.bounceInRight
+                .col-xs-4  工作地点: #{job.workplace}
+                .col-xs-4  职位月薪: #{job.salary}
+                .col-xs-4  发布日期: #{job.release}
+                .col-xs-4  工作性质: #{job.nature}
+                .col-xs-4  工作年限: #{job.service}
+                .col-xs-4  最低学历: #{job.education}
+              dl.wow.bounceInRight(data-wow-delay="0.5s")
+                dt 职位描述: 
+                dd #{job.description.join(" ")}
+                dt 任职要求: 
+                dd #{job.requirement.join(" ")}
+              a(href="http://company.zhaopin.com/CZ681240130.htm", target="_blank").btn.btn-danger  申请职位
+            .col-lg-6
+              img(src="/images/job/"+ job.img, alt="").img-responsive
 
 
     

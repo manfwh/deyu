@@ -1,4 +1,7 @@
-.title .small{
+.tit {
+    color: #50985f;
+}
+.tit .small{
     margin-top: 20px;
     font-size: 50%;
 }
@@ -6,9 +9,8 @@
     margin: 0;
 }
 
-h2 {
+.job-title {
     font-size: 48px;
-    margin-top: 60px;
     
 }
 .job {
@@ -138,24 +140,24 @@ dd {
     bottom: -180px;
     z-index: -1;
 }
-.login-wrap .btn-wrap {
+.btn-wrap {
     background: #025f35;
     margin-top: 50px;
     cursor: pointer;
     transition: all 0.2s;
     position: relative;
 }
-.login-wrap .btn-wrap:hover {
+.btn-wrap:hover {
     background: #257c55;
 }
-.login-wrap .btn-text-wrap {
+.btn-text-wrap {
     border: 2px solid #fff;
     color: #fff;
     text-align: center;
     line-height: 48px;
     font-size: 20px;
 }
-.btn-wrap .subButton {
+.subButton {
     position: absolute;
     width: 100%;
     height: 100%;
