@@ -345,8 +345,9 @@ ul {
 }
 /* nav */
 .navbar-brand img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
 }
 .navbar-brand {
     padding: 0;
@@ -533,11 +534,13 @@ footer.footer {
 .footer .tel {
     text-align: left;
     padding-left: 64px;
+    font-size: 20px;
     line-height: 35px;
 }
 .footer .tel-title {
-    color: #fff;
-    font-size: 20px;
+    color: #eee;
+}
+.footer .tel-num {
 }
 .footer .wechat {
     padding-top: 40px;
