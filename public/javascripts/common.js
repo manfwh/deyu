@@ -5,6 +5,7 @@
         //     'click #goToTop': 'goToTop'
         // }
         this.goToTopBtn = $('#goToTop');
+        this.signOut = $("#signOut")
         this.fixedTool = $('.fixedTool')
         this.scrollTrigger = 500 //px
 
@@ -13,6 +14,7 @@
     DEYU.prototype.init = function () {
         this._fixedToolShow()
         this.goToTopBtn.click(this._goToTop)
+        this.signOut.on('click', this._signOut)
     }
     // 返回顶部
     DEYU.prototype._goToTop = function () {
@@ -31,6 +33,20 @@
                 _this.fixedTool.show()
             }
         })
+    }
+    // 退出登录
+    DEYU.prototype._signOut = function(e) {
+        $.ajax({
+            url: '/signOut',
+            type: 'POST',
+            success: function(data) {
+                global.location.href = '/login'
+            },
+            error: function(err) {
+                console.log(err)
+            }
+        })
+        return false;
     }
     global.DEYU = DEYU;
 

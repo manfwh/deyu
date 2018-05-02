@@ -65,6 +65,20 @@ dd {
 
 
 /************************** OA办公页面 **************************/
+/* 退出登录 */
+#signOut {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #025f35;
+    transition: all 0.3s;
+    background: #fff;
+    color: #025f35;
+    padding: 10px 20px;
+}
+#signOut:hover {
+    color: #fff;
+    background: #025f35;
+}
 .barPic {
     margin: 0;
 }

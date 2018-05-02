@@ -32,8 +32,12 @@ block content
           a(href="/") 首页 
        
         li.active  合作招募
-    .jumbotron(style="display:none")
+    .jumbotron(style="display:none").text-center
+
       h1 提交成功
+      p
+        span#intalval 5 
+        | s后回到首页
       p 
         a.btn.btn-primary.btn-lg(href="/") 回到首页
     .block.mt-50
@@ -49,20 +53,20 @@ block content
             .col-sm-6
                .form-group
                  label(for="name") 姓名
-                 input#name.form-control(type="text", placeholder="姓名", name="name")
+                 input#name.form-control(type="text", placeholder="姓名", name="name", required)
             .col-sm-6
               .form-group
                 label(for="city") 城市
-                input#city.form-control(type="text", placeholder="城市", name="city")
+                input#city.form-control(type="text", placeholder="城市", name="city", required)
            
             .col-sm-6 
               .form-group
                 label(for="phone") 电话
-                input#phone.form-control(type="number", placeholder="手机号", name="phone")
+                input#phone.form-control(type="text", placeholder="手机号", name="phone", required)
             .col-sm-6 
               .form-group
                 label(for="email") 邮箱
-                input#email.form-control(type="email", placeholder="email", name="email")
+                input#email.form-control(type="email", placeholder="email", name="email", required)
             .col-sm-12
               .form-group
                 label(for="remarks") 备注
@@ -85,9 +89,19 @@ block content
                 url: '/join',
                 data: form.serialize()
             }).done(function(data, status) {
+                var sec = 5;
                 $('.block').hide();
                 $('.jumbotron').show()
                 $(document).scrollTop(0);
+                var intalval = setInterval(function() {
+                  sec--;
+                  if (sec < 0) {
+                    clearInterval(intalval);
+                    window.location.href = '/'
+                  } else {
+                    $('#intalval').text(sec);
+                  }
+                }, 1000)
             }).fail(function() {
                 alert('提交失败，请联系管理员！')
             })
