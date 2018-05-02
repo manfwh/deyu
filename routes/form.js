@@ -18,7 +18,8 @@ router.post('/join', function (ctx, next) {
    城市: ${city}\r\n
    备注： ${remarks}\r\n
    提交时间： ${date.getDate()} 日 ${date.getHours()} : ${date.getMinutes()} \r\n
-   ***************************************\r\n
+   ***************************************\r\n\r\n\r\n\r\n\r\n
+
   `
   const data2 = `
     {
