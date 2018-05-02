@@ -22,7 +22,7 @@ block nav
                 a(href="/oa")  OA办公
                 .selected
 block content
-  img.barPic(src="/images/bar-pic.jpg", alt="")
+  img.barPic(src="/images/pageBanner/oa.jpg", alt="")
   .container.shadow
     .top-bar.hidden-xs
     //- 导航 搜索框
@@ -49,22 +49,16 @@ block content
               th 上传时间
               th 下载
           tbody
-            tr
-              td 1
-              td #{cateName}#{cateName}
-              td doc
-              td 755KB
-              td 2018/04/20
-              td 
-                a(href="#" download) 点击下载
-            tr
-              td 2
-              td #{cateName}#{cateName}
-              td doc
-              td 755KB
-              td 2018/04/20
-              td 
-                a(href="#" download) 点击下载
+            each file, index in files
+              tr
+                td #{index+1}
+                td(data-type=file.type) #{file.name}
+                td #{file.type}
+                td #{file.size}
+                td #{file.createAt}
+                td 
+                  a(href=file.path download=file.name) 点击下载
+           
          
         
     

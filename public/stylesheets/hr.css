@@ -133,7 +133,24 @@ dd {
     margin: 0;
 }
 
+/********************************* OA分类 *********************************/
 
+table tbody td[data-type$='pptx'], table tbody td[data-type$='pps'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px -60px no-repeat;
+}
+table tbody td[data-type$='xlsx'], table tbody td[data-type$='xls'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px -90px no-repeat;
+}
+table tbody td[data-type$='doc'], table tbody td[data-type$='docx'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px -30px no-repeat;
+}
+table tbody td[data-type$='pdf'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px 0px no-repeat;
+}
 /********************************* 登录页面 *********************************/
 
 .login-wrap {
