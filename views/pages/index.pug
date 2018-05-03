@@ -1,7 +1,11 @@
 extends ../layout
 block css
-  link(rel="stylesheet", href="/stylesheets/style.css")
-
+  if env === 'production'
+    link(rel="stylesheet", href="/css/style.min.css")
+  else
+    //-<!-- build:css /css/style.min.css -->
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    //-<!-- endbuild -->
 block nav
   include ../includes/nav.pug
     block navbar
@@ -10,7 +14,7 @@ block nav
                 a(href='/') 首页
                 .selected    
             li
-                a(href="/product") 产品介绍   
+                a(href="/product") 名品商城   
             li
                 a(href="/entityShop") DUY
             li

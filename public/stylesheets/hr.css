@@ -70,6 +70,8 @@ dd {
     height: 30px;
     line-height: 30px;
     border: 1px solid #025f35;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     background: #fff;
     color: #025f35;
@@ -117,6 +119,8 @@ dd {
     color: #fff;
     background: rgba(2, 95, 53, 0.5);
     text-align: center;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     transition: all 0.4s;
     overflow: hidden;
 }
@@ -124,10 +128,15 @@ dd {
     background: rgba(2, 95, 53, 0.9);
 }
 .maskPic .des:hover h2 {
-    transform: translateY(-100%)
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+         -o-transform: translateY(-100%);
+        transform: translateY(-100%)
 }
 
 .maskPic .des h2{
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     line-height: 210px;
     margin: 0;
@@ -175,6 +184,8 @@ table tbody td[data-type$='pdf'] {
     background: #025f35;
     margin-top: 50px;
     cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
     position: relative;
 }
