@@ -8,7 +8,7 @@ block nav
             li
                 a(href='/') 首页    
             li
-                a(href="/product") 产品介绍
+                a(href="/product") 名品商城
             li
                 a(href="/entityShop") DUY
             li
@@ -89,6 +89,7 @@ block content
                 url: '/join',
                 data: form.serialize()
             }).done(function(data, status) {
+                
                 var sec = 5;
                 $('.block').hide();
                 $('.jumbotron').show()

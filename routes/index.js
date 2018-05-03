@@ -27,7 +27,8 @@ router.get('/', async (ctx, next) => {
   const data = require('../data/productsShow')
   await ctx.render('pages/index', {
     title: TITLE,
-    data
+    data,
+    env: process.env.NODE_ENV
   })
 })
 // 产品介绍
@@ -77,7 +78,6 @@ router.get('/join', async (ctx) => {
 // oA办公
 router.get('/oa', async (ctx, next) => {
   await next()
-
   await ctx.render('pages/oa', {
     title: TITLE
   })
@@ -175,6 +175,11 @@ router.get('/news/:id', async (ctx, next) => {
     case "3":
       await ctx.render('pages/news3', { title: TITLE });
   }
+})
+
+router.get('/addUser', async ctx =>{
+  await ctx.render('pages/addUser', {
+  })
 })
 router.get('/string', async (ctx, next) => {
   ctx.body = 'koa2 string'

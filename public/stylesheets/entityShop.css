@@ -100,6 +100,8 @@
 .shop-item {
     border: none;
     position: relative;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     transition: all 0.4s;
     padding: 26px;
 }
@@ -126,7 +128,8 @@
     font-size: 18px;
 }
 .shop-item:hover {
-    box-shadow: 0 0 36px 0 #ccc;
+    -webkit-box-shadow: 0 0 36px 0 #ccc;
+            box-shadow: 0 0 36px 0 #ccc;
 }
 .shop-item h3 span::before {
     content: '';

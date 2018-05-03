@@ -1,7 +1,8 @@
 /* 巨幕 */
 .jumbotron {
     background: url(/images/jum.jpg) no-repeat;
-    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
     width: 100%;
     height: 600px;
     /* height:  */
@@ -30,7 +31,8 @@
 /* 主体内容 */
 .main {
     margin: -76px auto 0;
-    box-shadow: 0 0 50px 0 #ccc;
+    -webkit-box-shadow: 0 0 50px 0 #ccc;
+            box-shadow: 0 0 50px 0 #ccc;
     background: #fff;
 }
 .main .top-bar {
@@ -90,7 +92,8 @@ h3 span {
 }
 .swiper-slide-active {
     opacity: 1;
-    box-shadow: 0px 4px 30px 0px rgba(185, 185, 185, 0.75);
+    -webkit-box-shadow: 0px 4px 30px 0px rgba(185, 185, 185, 0.75);
+            box-shadow: 0px 4px 30px 0px rgba(185, 185, 185, 0.75);
 }
 
 

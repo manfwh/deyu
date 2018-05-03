@@ -9,7 +9,7 @@ block nav
             li
                 a(href='/') 首页    
             li
-                a(href="/product") 产品介绍
+                a(href="/product") 名品商城
             li
                 a(href="/entityShop") DUY
             li
@@ -143,6 +143,9 @@ block content
                 console.log(data)
                 if(data.code == 40001) {
                     alert('账号有误')
+                    return
+                } else if(data.code == 40002) {
+                    alert(data.message);
                     return
                 } else {
                     window.location.href = '/oa'
