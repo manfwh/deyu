@@ -1,3 +1,4 @@
+
 /* 原子类 */
 .pad100 {
     padding: 0 100px;
@@ -73,18 +74,19 @@ article p{
 }
 /*  block */
 .block {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .block .title {
-    font-size: 86px;
-    color: rgba(100, 158, 109, 0.1);
+    font-size: 43px;
+    color: rgba(135, 1189, 143, 0.1);
     margin: 0 auto;
     text-align: center;
     position: relative;
 }
+
 .block .title .title-text {
     color: #50985f;
-    font-size: 55px;
+    font-size: 28px;
     position: relative;
     top: -50px;
     width: 298px;
@@ -93,17 +95,74 @@ article p{
 .block .title .title-text::before, .block .title .title-text::after {
     position: absolute;
     width: 28px;
-    height: 6px;
+    height: 2px;
     background: #986e50;
     content: '';
     top: 50%;
     margin-top: -3px;
 }
 .block .title .title-text::before {
-    left: -28px;
+    left: 48px;
 }
 .block .title .title-text::after {
-    right: -28px;
+    right: 48px;
+}
+@media (min-width: 1200px) {
+    .block {
+        margin-top: 100px;
+    }
+    .block .title {
+        font-size: 86px;
+        color: rgba(100, 158, 109, 0.1);
+    }
+    .block .title .title-text {
+        font-size: 55px;
+    }
+    .block .title .title-text::before, .block .title .title-text::after {
+        height: 6px;
+    }
+    .block .title .title-text::before {
+        left: -28px;
+    }
+    .block .title .title-text::after {
+        right: -28px;
+    }
+    .nav-top {
+        min-height: 120px; 
+        padding-top: 40px;
+    }
+    .navbar-brand {
+        padding: 0;
+    }
+    .nav-top .navbar-nav>li>a {
+        font-size: 18px;
+    }
+    .nav-top .selected{
+        width: 12px;
+        height: 12px;
+        background: url(/images/sprites.png) no-repeat -49px 0;
+        -webkit-transform: translateX(-6px);
+            -ms-transform: translateX(-6px);
+             -o-transform: translateX(-6px);
+            transform: translateX(-6px);
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+    }
+    .nav-top .selected::before, .nav-top .selected::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        top: 5px;
+        background: #404040;
+    }
+    .nav-top .selected::before {
+        left: -35px;
+    }
+    .nav-top .selected::after {
+        right: -35px;
+    }
 }
 .text-hidden {
     white-space: nowrap;
@@ -358,22 +417,17 @@ ul {
     height: 40px;
     margin-top: 10px;
 }
-.navbar-brand {
-    padding: 0;
-    height: 78px;
-}
+
 .nav-top {
     background: #fff;
-    border: none;
-    min-height: 120px;
-    padding-top: 40px;
+    /* border: none; */
+    margin-bottom: 0;
 }
 .nav-top .navbar-nav>li {
     position: relative;    
 }
 .nav-top .navbar-nav>li>a {
     color: #8c8c8c;
-    font-size: 18px;
 }
 
 .nav-top .navbar-text {
@@ -384,32 +438,7 @@ ul {
     background: #fff;
     color: #404040;
 }
-.nav-top .selected{
-    width: 12px;
-    height: 12px;
-    background: url(/images/sprites.png) no-repeat -49px 0;
-    -webkit-transform: translateX(-6px);
-        -ms-transform: translateX(-6px);
-         -o-transform: translateX(-6px);
-        transform: translateX(-6px);
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-}
-.nav-top .selected::before, .nav-top .selected::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    top: 5px;
-    background: #404040;
-}
-.nav-top .selected::before {
-    left: -35px;
-}
-.nav-top .selected::after {
-    right: -35px;
-}
+
 /* 侧边栏浮动工具条 */
 .fixedTool {
     width: 50px;
@@ -417,6 +446,7 @@ ul {
     bottom: 80px;
     right: 0;
     display: none;
+    z-index: 100;
 
 }
 .fixedTool li {

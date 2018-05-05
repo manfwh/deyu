@@ -1,1 +1,1 @@
-[{"account":"admin","password":"admin"},{"account":"hfg","password":"hgf"},{"account":"hfgfd","password":"hgf"}]
+[{"account":"admin","password":"admin","isDel":true,"rule":10}]

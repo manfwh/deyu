@@ -29,18 +29,18 @@
 }
 .prod-tabs .cate-name {
     padding-top: 20px;
+    font-size: 14px;
 }
+
 .prod-tabs .cate span {
     color: #b4bcb9;
 }
-.tab-content {
-    margin-top: 90px;
-}
+
 .tab-content .product {
     height: 344px;
     padding-top: 20px;
     position: relative;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     -webkit-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
@@ -58,22 +58,10 @@
     margin: 8px 0;
 }
 .product:hover {
-    border: 2px solid #000;
+    border: 1px solid #000;
 }
-.product:hover::after {
-    content: '';
-    width: 16px;
-    height: 14px;
-    border-left: 2px solid #000;
-    border-top: 2px solid #000;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-    
-}
+
+
 /* 公司动态 */
 .news-box {
     position: relative;
@@ -88,7 +76,7 @@
     float: left;
     background: url('/images/dongtai/1.jpg');
 }
-.news-box .left .mask {
+.news-box .left .mask, .m-new-wrap .mask {
     position: absolute;
     left: 0;
     top: 0;
@@ -281,17 +269,30 @@
     width: 525px;
     height: 409px;
 }
-
-
-
-
-/* 合作品牌 */
-.cooperation {
-    margin-top: 600px;
-}
-.cooperation .row .col-lg-4 {
+.dp-wrap {
     margin-top: 50px;
+    position: relative;
 }
+.dp-wrap .caption {
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.dp-wrap .caption img {
+    width: 78px;
+    height: 68px;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+.dp-wrap .caption h3 {
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+/* 合作品牌 */
+
 .cooperation .row img {
     width: 317px;
     height: 90px;
@@ -307,13 +308,76 @@
     height: 90px;
     line-height: 90px;
 }
-
-
-
-
-
-
-/* 底部 */
-footer.footer {
-    margin-top: -260px;
+.cooperation .row .col-lg-4 {
+    margin-top: 20px;
 }
+
+.m-new-wrap{
+    padding: 20px;
+    position: relative;
+    background: url("/images/dongtai/1.jpg") no-repeat 0 0;
+    background-size: cover;
+}
+.m-new-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.m-new-wrap .mask {
+    z-index: 0;
+}
+.m-new-wrap .title .p {
+    vertical-align: middle; display: inline-block; *display: inline; *zoom: 1;
+}
+.m-new-wrap .title {
+    border: 5px solid #fff;
+    height: 170px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    display: block;
+}
+.visible{height: 100%; vertical-align: middle; width: 0; display: inline-block;}
+/* 响应式 */
+@media (min-width: 1200px) {
+    .tab-content {
+        margin-top: 90px;
+    }
+    .tab-content .product {
+        border-width: 2px;
+    }
+    .prod-tabs .cate-name {
+        font-size: 16px;
+    }
+    .product:hover {
+        border: 2px solid #000;
+    }
+    .product:hover::after {
+        content: '';
+        width: 16px;
+        height: 14px;
+        border-left: 2px solid #000;
+        border-top: 2px solid #000;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+    }
+    footer.footer {
+        margin-top: -260px;
+    }
+    .cooperation .row .col-lg-4 {
+        margin-top: 50px;
+    }
+    .cooperation {
+        margin-top: 600px;
+    }
+}
+
+
+
+
+
+

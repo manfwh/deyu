@@ -50,7 +50,7 @@ router.post('/login', async (ctx, next) =>{
   const user = users.find((user => user.account == account))
   if(user) {
     if(user.password == password) {
-      ctx.session.user = account
+      ctx.session.user = user
       ctx.redirect('/oa');
     } else {
       ctx.body = {
@@ -71,7 +71,6 @@ router.post('/signOut', async (ctx, next) =>{
   ctx.session.user = null;
   ctx.status = 204;
 })
-
 // 临时接口  添加账户
 router.post('/register', async ctx =>{
   const {account, password} = ctx.request.body;
@@ -85,7 +84,7 @@ router.post('/register', async ctx =>{
           message: '该账户已存在'
         }
       }
-      users.push({account, password})
+      users.push({account, password, idDel: false, rule: 0})
       await fse.writeJson('./data/admin.json',users )
       ctx.body = {
         code: 20000,
@@ -95,6 +94,22 @@ router.post('/register', async ctx =>{
       console.log(error)
     }
     
+  }
+})
+// 临时接口 禁用账户
+router.post('/user/del', async ctx =>{
+  if(ctx.session.user.rule >= 10) {
+    const {account} = ctx.request.body;
+    console.log(account,  ctx.request.body)
+    const userList = await fse.readJson('./data/admin.json')
+    console.log(userList)
+    const user = userList.find(user => user.account == account);
+    user.isDel = true;
+    await fse.writeJSON('./data/admin.json', userList);
+    ctx.body = {
+      code: 20000,
+      message: '删除成功'
+    }
   }
 })
 module.exports = router

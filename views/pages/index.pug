@@ -116,7 +116,15 @@ block content
           | GONGSIDONGTAI
           .title-text 公司动态      
       .block-content
-        .news-box.clearfix
+        .hidden-lg.m-new-wrap
+          .mask
+          //- img(src="/images/dongtai/1.jpg", alt="")
+          a(href="/news/1").title
+            .p.wow.fadeInUp
+              .text  德宇创星 · DUY生活馆
+              .text  我们不一样
+            i.visible
+        .news-box.clearfix.hidden-xs
           .sec2
           .pic-wrap.wow.bounceInRight(data-wow-delay="0.5s")  
           a(href="/news/1").left
@@ -139,7 +147,28 @@ block content
           | 更多动态
           br
           | MORE DYNAMIC
-    #rank
+    .block.hidden-lg
+      .header
+        .title 
+          | DIANPIANZHANSHI
+          .title-text 店面展示
+      .block-content
+        .dp-wrap
+          img.img-responsive(src="/images/median/1.jpg", alt="")
+          .caption
+            img.img-responsive.wow.fadeInLeft(src="/images/top1.png")
+            h3.wow.fadeInUp DUY生活体验馆
+        .dp-wrap
+          img.img-responsive(src="/images/median/2.jpg", alt="")
+          .caption
+            img.img-responsive.wow.fadeInLeft(src="/images/top2.png")
+            h3.wow.fadeInUp DUY生活体验馆
+        .dp-wrap
+          img.img-responsive(src="/images/median/3.jpg", alt="")
+          .caption
+            img.img-responsive.wow.fadeInLeft(src="/images/top3.png")
+            h3.wow.fadeInUp DUY生活体验馆
+    #rank.hidden-xs
       .store-wrap.top1    
         img.rank-num.wow.bounceInLeft(src="/images/top1.png", alt="") 
         .store-name.wow.bounceInLeft(data-wow-delay="0.4s")
@@ -170,9 +199,16 @@ block content
         .row
           each val, index in [1, 2, 3, 4, 5, 6, 7, 8, 9]
             .col-lg-4
-              img(src="/images/hezuo/" + val + ".jpg", alt="")
-          
-    .about
+              img.img-responsive.wow.fadeInUp(src="/images/hezuo/" + val + ".jpg", alt="")
+    .block.hidden-lg.wow.fadeInUp
+      .header
+        .title 
+          | GUANYUWOMEN
+          .title-text 关于我们      
+      .block-content   
+        p.muted 德宇创星▪DUY生活体验馆，是以“生活、服务、共享、科技、财富”为理念的高端服务品牌。DUY打破传统竞争瓶颈，致力于在全国范围内设立“千城万店”的全民高端生活体验馆，打造中国第一家共享服务式平台。
+        p.muted DUY以“3+N”“养护彩妆”为核心；以“共享”“科技”“个性化定制”为服务理念。同时，DUY为会员打造出“尊享”“分红”“增值”的机制。DUY致力于为消费者创造自然舒适的优质服务，完美演绎“科技亮肤，柔性之美” 
+    .about.hidden-xs
       .about-text
         img(src="/images/aboutTitle.jpg", alt="")  
         p 德宇创星▪DUY生活体验馆，是以“生活、服务、共享、科技、财富”为理念的高端服务品牌。DUY打破传统竞争瓶颈，致力于在全国范围内设立“千城万店”的全民高端生活体验馆，打造中国第一家共享服务式平台。
