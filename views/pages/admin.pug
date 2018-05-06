@@ -1,0 +1,137 @@
+extends ../layout
+block css
+block nav
+  style.
+      table a {
+          text-decoration: underline;
+          color: blue;
+      }
+  
+  include ../includes/nav.pug
+    block navbar
+        ul.nav.navbar-nav.navbar-right
+            li
+                a(href='/') 首页    
+            li
+                a(href="/product") 名品商城
+                
+            li
+                a(href="/entityShop") DUY
+                
+            li.active
+                a(href="/about")  关于我们
+                .selected
+            li
+                a(href="/join")  合作招募
+            li
+                a(href="/hr")  诚聘英才
+            li
+                a(href="/oa")  OA办公
+block content
+  .container
+    .page-headdr
+      h1 后台管理
+    table.table.table-bordered.table-hover#admin
+      thead
+        tr
+        th  账号
+        th  密码
+        th  权限
+        th  设置
+        th  状态
+      tbody
+        each user, index in userList
+          tr(data-account=user.account, data-password = user.password)
+            td #{user.account}
+            td #{user.password}
+            td #{user.rule}
+            td
+              button(type="button", data-toggle="modal", data-target=".confirmDelModal").btn.btn-danger.del 删除
+              button(type="button", data-toggle="modal", data-target=".editModal").btn.btn-success.edit 修改
+            td #{user.isDel}
+  .modal.fade.confirmDelModal(tabindex="-1", role="dialog")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button(type="button", data-dismiss="modal", aria-label="Close").close
+            span(aria-hidden="true") &times;
+          h4.modal-title 提示
+        .modal-body
+          p 
+          | 确认要删除
+          span.account
+          | 吗?
+        .modal-footer
+          button(type="button", data-dismiss="modal").btn.btn-default 取消
+          button(type="button").btn.btn-danger#del 删除
+  .modal.fade.editModal
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button(type="button", data-dismiss="modal", aria-label="Close").close
+            span(aria-hidden="true") &times;
+          h4.modal-title 修改
+        .modal-body
+          form
+            .form-group
+              label(for="account") 账户名
+              input(type="text", disabled).form-control.account
+            .form-group
+              label(for="password") 密码
+              input(type="text").form-control.password
+        .modal-footer
+          button(type="button", data-dismiss="modal").btn.btn-default 取消
+          button(type="button").btn.btn-success#del 保存
+  script.
+    $(function() {
+        var Admin = function(options) {
+            this.el = $('#admin');
+            this.account = null;
+            this.delBtn = $('.del');
+            this.init() 
+        }
+        Admin.prototype.init = function() {
+            var _this = this;
+            $('#del').on('click',  this.del.bind(this))
+            //- this.delBtn.on('click', this.del.bind(this))
+            this.el.on('click', 'td button', function(e) {
+                var data = $(this).parents('tr')
+                var account = data.data('account')
+                var password = data.data('password')
+                $('.account').val(account).text(account)
+                $('.password').val(password)
+                _this.account = $(this).parents('tr').data('account')
+            })
+        }
+        Admin.prototype.del = function(e) {
+            $.ajax({
+                url: '/user/del',
+                type: 'POST',
+                data: {
+                    name: 1,
+                    account: this.getAccount()
+                }
+            }).done(function(data) {
+                console.log(data)
+                if(data.code == 20000) {
+                    $('.confirmDelModal').modal('hide')
+                }
+            })
+            .fail(function(err) {
+                console.log(err)
+            })
+        }
+        Admin.prototype.getAccount = function() {
+            return this.account
+        }
+        new Admin()
+    })
+
+
+
+ 
+
+    
+
+      
+    

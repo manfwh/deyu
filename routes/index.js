@@ -181,6 +181,15 @@ router.get('/addUser', async ctx =>{
   await ctx.render('pages/addUser', {
   })
 })
+// 临时接口 admin
+router.get('/admin', async (ctx, next) =>{
+  await next();
+  const userList = await fse.readJson('./data/admin.json');
+  await ctx.render('pages/admin', {
+    title: TITLE,
+    userList
+  })
+}, check.checkLogin, check.checkPermissions)
 router.get('/string', async (ctx, next) => {
   ctx.body = 'koa2 string'
 })
