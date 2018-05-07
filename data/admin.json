@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+[{"account":"admin","password":"admin"},{"account":"hfg","password":"hgf"},{"account":"hfgfd","password":"hgf"},{"account":"18016016382","password":"18016016382"}]
+=======
 [{"account":"admin","password":"admin","isDel":true,"rule":10}]
+>>>>>>> 197bd485d4671b5d1b8d0441ae791be2283ad418
