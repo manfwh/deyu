@@ -28,19 +28,29 @@ block content
           | OA BANGONG
           .title-text OA 办公
       .block-content
-        .row
+        .container.hidden-lg
+          form.loginForm
+            .form-group
+              label(for="account") 账号：
+              input.account.form-control(type="text", name="account", placeholder="请输入账号")
+            .form-group
+              label(for="password") 密码：
+              input.password.form-control(type="password", name="password", placeholder="请输入密码")
+            .form-group
+              button.btn.btn-success.btn-block(type="submit") 提交
+        .row.hidden-xs
           .col-md-4.col-md-offset-4.login-wrap
             img.topLeftPic.hidden-xs(src="/images/joinPic2.png", alt="")
             img.bottomRightPic.hidden-xs(src="/images/loginPic.jpg", alt="")
-            form#loginForm.form-horizontal
+            form.loginForm.form-horizontal
               .form-group
                 label.col-sm-2.control-label(for="account") 账号：
                 .col-sm-10
-                  input#account.form-control(type="text", name="account", placeholder="请输入账号")
+                  input.account.form-control(type="text", name="account", placeholder="请输入账号")
               .form-group.mt-50
                 label.col-sm-2.control-label(for="password") 密码：
                 .col-sm-10
-                  input#password.form-control(type="password", name="password", placeholder="请输入密码")
+                  input.password.form-control(type="password", name="password", placeholder="请输入密码")
               .pull-right(data-toggle="tooltip", data-placement="left" ,title="请联系管理员") 
                 span.glyphicon.glyphicon-question-sign
                 span 忘记密码
@@ -131,7 +141,7 @@ block content
   script.
       $(function () {
         $('[data-toggle="tooltip"]').tooltip();
-        $('#loginForm').submit(function(event) {
+        $('.loginForm').submit(function(event) {
             console.log(event)
             event.preventDefault();
             var form = $(this);

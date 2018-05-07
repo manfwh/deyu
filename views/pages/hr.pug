@@ -53,7 +53,7 @@ block content
     each job, index in jobs
       .row.mt-50
         if index%2 == 0
-          .col-lg-6
+          .col-lg-6.hidden-xs
             img(src="/images/job/"+ job.img, alt="").img-responsive
           .col-lg-6.job
             h2.job-title.wow.bounceInUp  #{job.title}
@@ -71,7 +71,6 @@ block content
               dd #{job.requirement.join(" ")}
             a(href="http://company.zhaopin.com/CZ681240130.htm", target="_blank").btn.btn-danger  申请职位
         else
-          .row.mt-50
             .col-lg-6.job
               h2.job-title.wow.bounceInUp  #{job.title}
               .row.mt-50.wow.bounceInRight
@@ -87,7 +86,7 @@ block content
                 dt 任职要求: 
                 dd #{job.requirement.join(" ")}
               a(href="http://company.zhaopin.com/CZ681240130.htm", target="_blank").btn.btn-danger  申请职位
-            .col-lg-6
+            .col-lg-6.hidden-xs
               img(src="/images/job/"+ job.img, alt="").img-responsive
 
 

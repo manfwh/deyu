@@ -24,10 +24,11 @@ block nav
             li
                 a(href="/oa")  OA办公
 block content
-  .jumbotron.text-center
-    h1.wow.bounceInUp  COOPERATION IS THE DRIVING FORCE
+  .about-Banner.text-center
+    img.img-responsive(src="/images/jum.jpg", alt="")
+    h1  COOPERATION IS THE DRIVING FORCE
   .main.container
-    .top-bar.hidden-xs
+   
     //- 导航 搜索框
     .topBar.clearfix
       ol._breadcrumb.pull-left
@@ -45,8 +46,8 @@ block content
         p.text-muted 跨入新时代，“互联网+”和“新零售”成为引领经济发展的新趋势，伟洲咨询中心在吸收新时代经济理念的同时，考察传统市场经济。发现传统市场存在线上体验感不高，线下实体竞争力不足的问题。在这基础之上，伟洲咨询中心积极推进新经济结构转型，构建新经济体系，搭建新零售平台，有效整合市场资源。2018年3月德宇创星在以创始人杜宇先生为核心的团队努力下成功实现转型。
         p.text-muted 德宇创星拥有高效的工作机制，全员秉承“志于道，据于德，依于仁 ”的企业文化，精心推出以“生活、服务、共享、科技、财富”为理念的高端服务品牌——DUY生活体验馆。DUY打破传统竞争瓶颈，致力于在全国范围内设立“千城万店”的全民高端生活体验馆，打造中国第一家共享服务式平台。
       .col-lg-6
-        img(src="/images/about.jpg", alt="")
-    .bar-Pic
+        img.img-responsive(src="/images/about.jpg", alt="")
+    .bar-Pic.hidden-xs
       .row
         .col-sm-4.wow.bounceInUp
           .num 企业形象
@@ -86,7 +87,26 @@ block content
         .title 
           | RECENT NEWS
           .title-text 最新动态
-      ol.wow
+      .row.hidden-lg
+        .col-sm-12
+          a(href="/news/1").thumbnail
+            img(src="/images/news1.png", alt="")
+            .caption
+              h4  德宇创星▪DUY生活馆，我们不一样
+              p 我们的目标 始终如一感受创世纪
+        .col-sm-12
+          a(href="/news/2").thumbnail
+            img(src="/images/news2.jpg", alt="")
+            .caption
+              h4  爸妈，今年的我不再是独自前行
+              p 时间总是在不知不觉中改变我们的生活轨迹，而我们对这种改变毫无察觉。
+        .col-sm-12
+          a(href="/news/3").thumbnail
+            img(src="/images/news3.jpg", alt="")
+            .caption
+              h4  妈，我想给您画个妆……
+              p 风日，有人提醒加衣；雨天，有人撑伞相迎。
+      ol.hidden-xs
         li.news.mt-50.clearfix
           img(src="/images/newsTop1.jpg", alt="").pull-left.mt-31
           img(src="/images/news1.png", alt="").pull-left
@@ -129,7 +149,7 @@ block content
             li.disabled
                 a(href='#', aria-label='Next')
                     span(aria-hidden='true') &raquo;   
-      .about
+      .about.hidden-xs
         .about-text
             img(src="/images/aboutTitle.jpg", alt="")  
             p 德宇创星▪DUY生活体验馆，是以“生活、服务、共享、科技、财富”为理念的高端服务品牌。DUY打破传统竞争瓶颈，致力于在全国范围内设立“千城万店”的全民高端生活体验馆，打造中国第一家共享服务式平台。

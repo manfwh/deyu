@@ -1,10 +1,21 @@
 /* 巨幕 */
+.about-Banner {
+    position: relative;
+}
+.about-Banner h1 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+}
 .jumbotron {
-    background: url(/images/jum.jpg) no-repeat;
+    /* background: url(/images/jum.jpg) no-repeat;
     -webkit-background-size: 100% 100%;
             background-size: 100% 100%;
-    width: 100%;
-    height: 600px;
+    width: 100%; */
 }
 .jumbotron h1 {
     color: #fff;
@@ -29,7 +40,7 @@
 
 /* 主体内容 */
 .main {
-    margin: -76px auto 0;
+    padding-top: 40px;
     -webkit-box-shadow: 0 0 50px 0 #ccc;
             box-shadow: 0 0 50px 0 #ccc;
     background: #fff;
@@ -100,9 +111,7 @@ h3 span {
 .about-text p {
     width: 450px;
 }
-.footer {
-    margin-top: -260px;
-}
+
 
 .box {
     margin-top: 80px;
@@ -123,4 +132,17 @@ h3 span {
     font-size: 48px;
     color: #85b890;
     font-weight: bold;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .jumbotron {
+        height: 600px;
+    }
+    .about-Banner h1  {
+        font-size: 72px;
+    }
+    .footer {
+        margin-top: -260px;
+    }
 }

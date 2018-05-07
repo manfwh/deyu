@@ -63,7 +63,27 @@ block content
         .title 
           | OAB OFFICE
           .title-text OA办公
-    .news.mt-50
+    .hidden-lg.container
+      .row.files
+        .col-xs-6
+          .mask.wow.fadeInUp
+            a(href="/oa/all") 全部
+        .col-xs-6
+          .mask.wow.fadeInUp
+            a(href="/oa/xz")  行政文件
+        .col-xs-6
+          .mask.wow.fadeInUp
+            a.noContent(href="/oa/vis")  VIS资料
+        .col-xs-6
+          .mask.wow.fadeInUp
+            a.noContent(href="/oa/ch")  策划方案
+        .col-xs-6
+          .mask.wow.fadeInUp
+            a.noContent(href="/oa/cp")  产品资料
+        .col-xs-6
+          .mask.wow.fadeInUp
+            a(href="//oaoa/train")  培训资料
+    .news.mt-50.hidden-xs
       //- ol.wow
         li.news.mt-50.clearfix
           img(src="/images/newsTop1.jpg", alt="").pull-left.mt-31

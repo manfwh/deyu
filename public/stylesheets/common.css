@@ -6,9 +6,7 @@
 .plr-40 {
     padding: 0 40px;
 }
-.plr-80 {
-    padding: 0 80px;
-}
+
 .mr-40 {
     margin-right: 40px;
 }
@@ -108,6 +106,12 @@ article p{
     right: 48px;
 }
 @media (min-width: 1200px) {
+    .news {
+        padding: 0 50px;
+    }
+    .plr-80 {
+        padding: 0 80px;
+    }
     .block {
         margin-top: 100px;
     }
@@ -254,9 +258,7 @@ p.hot span::before {
 }
 
 /* 关于我们--->最新动态       OA办公-----> 资料*/
-.news {
-    padding: 0 50px;
-}
+
 .news .arraw {
     position: absolute;
     bottom: -20px;

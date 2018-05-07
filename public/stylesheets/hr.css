@@ -13,9 +13,7 @@
     font-size: 48px;
     
 }
-.job {
-    padding-left: 50px;
-}
+
 dt {
     margin: 10px 0;
 }
@@ -142,24 +140,7 @@ dd {
     margin: 0;
 }
 
-/********************************* OA分类 *********************************/
 
-table tbody td[data-type$='pptx'], table tbody td[data-type$='pps'] {
-    padding-left: 40px;
-    background: url('/images/sprites.png') -170px -60px no-repeat;
-}
-table tbody td[data-type$='xlsx'], table tbody td[data-type$='xls'] {
-    padding-left: 40px;
-    background: url('/images/sprites.png') -170px -90px no-repeat;
-}
-table tbody td[data-type$='doc'], table tbody td[data-type$='docx'] {
-    padding-left: 40px;
-    background: url('/images/sprites.png') -170px -30px no-repeat;
-}
-table tbody td[data-type$='pdf'] {
-    padding-left: 40px;
-    background: url('/images/sprites.png') -170px 0px no-repeat;
-}
 /********************************* 登录页面 *********************************/
 
 .login-wrap {
@@ -206,4 +187,39 @@ table tbody td[data-type$='pdf'] {
     top: 0;
     left: 0;
     opacity: 0;
+}
+.files .mask {
+    text-align: center;
+    background: url("/images/file.jpg") no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+}
+.files .mask a {
+    line-height: 100px;
+    color: #fff;
+    display: block;
+    background: rgba(80, 152, 95, 0.9);    
+}
+@media (min-width: 1200px) { 
+    .job {
+        padding-left: 50px;
+    }
+    /********************************* OA分类 *********************************/
+
+table tbody td[data-type$='pptx'], table tbody td[data-type$='pps'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px -60px no-repeat;
+}
+table tbody td[data-type$='xlsx'], table tbody td[data-type$='xls'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px -90px no-repeat;
+}
+table tbody td[data-type$='doc'], table tbody td[data-type$='docx'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px -30px no-repeat;
+}
+table tbody td[data-type$='pdf'] {
+    padding-left: 40px;
+    background: url('/images/sprites.png') -170px 0px no-repeat;
+}
 }
