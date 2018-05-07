@@ -7,6 +7,7 @@ yarn-error.log*
 
 # data
 public/uploads/
+data/admin.json
 
 # Runtime data
 pids
