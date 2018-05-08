@@ -84,16 +84,12 @@
     background: #596380;
 }
 /* 全部店铺 */
-.box2 {
-    margin-top: 150px;
-}
+
 .box2 .box-title h2 {
     font-weight: bold;
     font-size: 40px;
 }
-.box2 .box-content {
-    margin-top: 80px;
-}
+
 .box2 .col-lg-4 {
     margin-top: 30px;
 }
@@ -103,7 +99,6 @@
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
-    padding: 26px;
 }
 .shop-item .newShop {
     width: 110px;
@@ -121,6 +116,7 @@
 .shop-item h3 {
     margin-top: 10px;
     font-size: 20px;
+    text-align: center;
 }
 .shop-item h3 span {
     font-style: italic;
@@ -146,6 +142,41 @@
 .footer {
     margin-top: 0;
 }
+/* 移动端 生活馆 */
+.m-entityWrap {
+    position: relative;
+}
+.m-entityWrap .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    opacity: 0.3;
+    left: 0;
+    top: 0;
+}
+.m-entityWrap  .text-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+.m-entityWrap  .text-wrap p {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.m-entityWrap  .text-wrap p span {
+    font-size: 14px;
+}
 
 
 /*********************************************  详情页面 *********************************************/
@@ -161,4 +192,16 @@ article h2 {
     color: #000;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+    .box2 {
+        margin-top: 150px;
+    }
+    .box2 .box-content {
+        margin-top: 80px;
+    }
+    .shop-item {
+        padding: 26px;
+    }
 }

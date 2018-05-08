@@ -296,6 +296,7 @@
 .cooperation .row img {
     width: 317px;
     height: 90px;
+    margin: 0 auto;
     -webkit-box-shadow: 0 0 30px 0 #d7e7dc;
             box-shadow: 0 0 30px 0 #d7e7dc;
 }
@@ -316,7 +317,8 @@
     padding: 20px;
     position: relative;
     background: url("/images/dongtai/1.jpg") no-repeat 0 0;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .m-new-wrap img {
     position: absolute;

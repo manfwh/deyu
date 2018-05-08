@@ -53,7 +53,39 @@ block content
         .title 
           | TIYANQU
           .title-text 生活馆
-      .box-content
+      // 移动端生活馆 开始
+      .m-box-content.hidden-lg
+        .row
+          .col-lg-4.mt-20 
+            .m-entityWrap
+              img.img-responsive(src="/images/tyShop.jpg", alt="")
+              .mask
+              .text-wrap
+                p.wow.fadeInUp
+                  |德宇创星·DUY生活体验馆
+                  br
+                  |<span>我们的目标 和价值观支撑着我们所做的一切</span>
+          .col-lg-4.mt-20 
+            .m-entityWrap
+              img.img-responsive(src="/images/shg.jpg", alt="")
+              .mask
+              .text-wrap
+                p.wow.fadeInUp
+                  |德宇创星·DUY生活体验馆
+                  br
+                  |<span>生活、服务、共享、科技、财富</span>  
+          .col-lg-4.mt-20 
+            .m-entityWrap
+              img.img-responsive(src="/images/tyShop.jpg", alt="")
+              .mask
+              .text-wrap
+                p.wow.fadeInUp
+                  |德宇创星·DUY生活体验馆
+                  br
+                  |<span>志于道 据于德 依于仁</span>  
+      // 移动端生活馆 结束
+      // pc端生活馆 开始
+      .box-content.hidden-xs
         .row
           .ty-shop.clearfix
             img.pull-left.img-responsive(src="/images/tyShop.jpg", alt="")
@@ -99,7 +131,7 @@ block content
                     li.disabled
                         a(href='#', aria-label='Next')
                             span(aria-hidden='true') &raquo;   
-
+      // pc端生活馆 结束
     //- 全部店铺
     .block.box2
       .header

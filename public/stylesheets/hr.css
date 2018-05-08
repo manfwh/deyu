@@ -10,8 +10,11 @@
 }
 
 .job-title {
-    font-size: 48px;
+    font-size: 24px;
     
+}
+.job-info {
+    font-size: 12px;
 }
 
 dt {
@@ -19,6 +22,7 @@ dt {
 }
 dd {
     line-height: 30px;
+    font-size: 12px;
 }
 
 
@@ -33,7 +37,7 @@ dd {
 .form-wrap  {
     border: 2px solid #d5d9ff;
     position: relative;
-    padding: 80px 54px;
+    padding: 50px 0;
 }
 .form-wrap button {
     background: #1282f2;
@@ -191,7 +195,8 @@ dd {
 .files .mask {
     text-align: center;
     background: url("/images/file.jpg") no-repeat;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     margin-top: 30px;
 }
 .files .mask a {
@@ -203,6 +208,15 @@ dd {
 @media (min-width: 1200px) { 
     .job {
         padding-left: 50px;
+    }
+    .job-title {
+        font-size: 44px;
+    }
+    .job-info {
+        font-size: 14px;
+    }
+    .form-wrap  {
+        padding: 80px 54px;
     }
     /********************************* OA分类 *********************************/
 

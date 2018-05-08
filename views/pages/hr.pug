@@ -57,7 +57,7 @@ block content
             img(src="/images/job/"+ job.img, alt="").img-responsive
           .col-lg-6.job
             h2.job-title.wow.bounceInUp  #{job.title}
-            .row.mt-50.wow.bounceInRight
+            .row.mt-50.wow.bounceInRight.job-info
               .col-xs-4  工作地点: #{job.workplace}
               .col-xs-4  职位月薪: #{job.salary}
               .col-xs-4  发布日期: #{job.release}
@@ -73,7 +73,7 @@ block content
         else
             .col-lg-6.job
               h2.job-title.wow.bounceInUp  #{job.title}
-              .row.mt-50.wow.bounceInRight
+              .row.mt-50.wow.bounceInRight.job-info
                 .col-xs-4  工作地点: #{job.workplace}
                 .col-xs-4  职位月薪: #{job.salary}
                 .col-xs-4  发布日期: #{job.release}

@@ -3,9 +3,7 @@ block css
   if env === 'production'
     link(rel="stylesheet", href="/css/style.min.css")
   else
-    //-<!-- build:css /css/style.min.css -->
-    link(rel="stylesheet", href="/stylesheets/style.css")
-    //-<!-- endbuild -->
+    link(rel="stylesheet", href="/css/style.min.css")
 block nav
   include ../includes/nav.pug
     block navbar
