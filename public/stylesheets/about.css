@@ -54,7 +54,6 @@
     margin: 0 -15px 30px;
 }
 h3 {
-    font-size: 34px;
     color: #67a674;
     font-weight: bold;
     line-height: 1.4;
@@ -147,5 +146,8 @@ h3 span {
     }
     .footer {
         margin-top: -260px;
+    }
+    h3 {
+      font-size: 34px;
     }
 }

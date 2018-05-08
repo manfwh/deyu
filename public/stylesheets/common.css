@@ -1,6 +1,8 @@
 
 body {
     font-family: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif';
+    overflow-x:hidden;
+    width:100%;
 }
 .navbar-nav>li>a {
     line-height: 10px;
@@ -43,9 +45,7 @@ a:focus, a:hover {
 .mb-50 {
     margin-bottom: 50px;
 }
-.mt-150 {
-    margin-bottom: 150px;
-}
+
 .mt-20 {
     margin-top: 20px;
 }
@@ -88,6 +88,9 @@ ol {
 /* 文章详情 */
 article {
     padding-bottom: 50px;
+}
+.news-title {
+    font-size: 24px;
 }
 article p{
     line-height: 2.5;
@@ -539,7 +542,6 @@ footer.footer {
 }
 .footer .concat {
     text-align: center;
-    padding-top: 70px;
 }
 .footer .line {
     width: 230px;
@@ -592,6 +594,9 @@ footer.footer {
     }
     .mlr-50 {
         margin: 0 50px;
+    }
+    .mt-150 {
+        margin-bottom: 150px;
     }
     .news {
         padding: 0 50px;
@@ -658,5 +663,11 @@ footer.footer {
     }
     .nav-top .selected::after {
         right: -35px;
+    }
+    .footer .concat {
+        padding-top: 70px;
+    }
+    .news-title {
+        font-size: 36rpx;
     }
 }
