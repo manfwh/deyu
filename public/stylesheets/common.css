@@ -1,4 +1,7 @@
-
+html {
+    overflow-x:hidden;
+    width:100%;
+}
 body {
     font-family: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif';
     overflow-x:hidden;
