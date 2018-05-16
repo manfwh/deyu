@@ -62,7 +62,7 @@ block content
             .col-sm-6 
               .form-group
                 label(for="phone") 电话
-                input#phone.form-control(type="text", placeholder="手机号", name="phone", required)
+                input#phone.form-control(type="text", placeholder="电话", name="phone", required)
             .col-sm-6 
               .form-group
                 label(for="email") 邮箱
@@ -84,28 +84,34 @@ block content
       $('#joinForm').submit(function(event) {
             event.preventDefault();
             var form = $(this);
-            $.ajax({
-                type: 'POST',
-                url: '/join',
-                data: form.serialize()
-            }).done(function(data, status) {
-                
-                var sec = 5;
-                $('.block').hide();
-                $('.jumbotron').show()
-                $(document).scrollTop(0);
-                var intalval = setInterval(function() {
-                  sec--;
-                  if (sec < 0) {
-                    clearInterval(intalval);
-                    window.location.href = '/'
-                  } else {
-                    $('#intalval').text(sec);
-                  }
-                }, 1000)
-            }).fail(function() {
-                alert('提交失败，请联系管理员！')
-            })
+            var phoneRe = /^((0\d{2,3}-\d{7,8})|(1\d{10}))$/;
+            if(phoneRe.test(form.find("#phone").val())) {
+              $.ajax({
+                  type: 'POST',
+                  url: '/join',
+                  data: form.serialize()
+              }).done(function(data, status) {
+                  var sec = 5;
+                  $('.block').hide();
+                  $('.jumbotron').show()
+                  $(document).scrollTop(0);
+                  var intalval = setInterval(function() {
+                    sec--;
+                    if (sec < 0) {
+                      clearInterval(intalval);
+                      window.location.href = '/'
+                    } else {
+                      $('#intalval').text(sec);
+                    }
+                  }, 1000)
+              }).fail(function() {
+                  alert('提交失败，请联系管理员！')
+              })
+            } else {
+              alert('电话号码格式有误')
+            }
+        
+              
         })
     })
   
